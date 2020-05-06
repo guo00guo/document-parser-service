@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="wordParserPOI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/wordParserPOI_jar</output-path>
+    <root id="root">
+      <element id="archive" name="wordParserPOI.jar">
+        <element id="module-output" name="wordParserPOI" />
+      </element>
+      <element id="library" level="project" name="activation-1.1.1" />
+    </root>
+  </artifact>
+</component>

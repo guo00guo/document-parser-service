@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="wordParserPOI:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="wordParserPOI" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="HierarchyBrowserManager">
+    <option name="SORT_ALPHABETICALLY" value="true" />
+  </component>
+  <component name="ProjectId" id="1TbLZgnvfKo2Lg3yJnuCyjat1X6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="JavaMethodFindUsagesOptions.isSearchForTextOccurrences" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15481833" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="FileParser" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\lib\pdfbox" />
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\lib\lib" />
+      <recent name="E:\java_project\wordParserWithPOI\testData" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="FileParser.DocParser" />
+      <recent name="FileParser.PdfParser" />
+      <recent name="FileParser" />
+      <recent name="wordParser" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
+      <recent name="E:\java_project\wordParserWithPOI\testData" />
+      <recent name="D:\java_project\wordParserWithPOI\pic\新建文件夹" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="WordParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileParser.WordParser" />
+      <module name="wordParserPOI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FileParser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WordParser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="" />
+      <created>1573723905874</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573723905874</updated>
+      <workItem from="1573723910686" duration="4646000" />
+      <workItem from="1573742322292" duration="2693000" />
+      <workItem from="1573777432557" duration="6961000" />
+      <workItem from="1574039739856" duration="9590000" />
+      <workItem from="1574124006534" duration="5908000" />
+      <workItem from="1574144940770" duration="6035000" />
+      <workItem from="1574154521776" duration="6067000" />
+      <workItem from="1574161179505" duration="678000" />
+      <workItem from="1574211738248" duration="10060000" />
+      <workItem from="1574226799923" duration="3352000" />
+      <workItem from="1574238561892" duration="5643000" />
+      <workItem from="1574733109939" duration="37000" />
+      <workItem from="1574992725681" duration="1751000" />
+      <workItem from="1575006605890" duration="5113000" />
+      <workItem from="1575012317792" duration="6201000" />
+      <workItem from="1575019189280" duration="13732000" />
+      <workItem from="1575041284443" duration="15300000" />
+      <workItem from="1575096472335" duration="15405000" />
+      <workItem from="1575125989346" duration="2130000" />
+      <workItem from="1575128509858" duration="372000" />
+      <workItem from="1575131210154" duration="3485000" />
+      <workItem from="1575172615399" duration="2340000" />
+      <workItem from="1575257450040" duration="21000" />
+      <workItem from="1575257519950" duration="66000" />
+      <workItem from="1575257656338" duration="28000" />
+      <workItem from="1575258309292" duration="1194000" />
+      <workItem from="1575266657654" duration="2183000" />
+      <workItem from="1575361627790" duration="21000" />
+      <workItem from="1575430828671" duration="68950000" />
+      <workItem from="1575869829227" duration="4523000" />
+      <workItem from="1575940538473" duration="1191000" />
+      <workItem from="1575942314174" duration="1182000" />
+      <workItem from="1576066019273" duration="12116000" />
+      <workItem from="1576228297134" duration="1839000" />
+      <workItem from="1576458801164" duration="258000" />
+      <workItem from="1577605181066" duration="317000" />
+      <workItem from="1578364996542" duration="13806000" />
+      <workItem from="1578398055152" duration="71853000" />
+      <workItem from="1582799425416" duration="1039000" />
+      <workItem from="1582868873232" duration="4773000" />
+      <workItem from="1582874033555" duration="1667000" />
+      <workItem from="1582880490601" duration="5876000" />
+      <workItem from="1583589229728" duration="15897000" />
+      <workItem from="1583648406817" duration="6695000" />
+      <workItem from="1583758913560" duration="7164000" />
+      <workItem from="1583905014739" duration="1070000" />
+      <workItem from="1584080841815" duration="241000" />
+      <workItem from="1584081112995" duration="7043000" />
+      <workItem from="1585186059360" duration="117000" />
+      <workItem from="1585186231237" duration="1245000" />
+      <workItem from="1585988144900" duration="2999000" />
+      <workItem from="1585991761936" duration="270000" />
+      <workItem from="1588153892249" duration="866000" />
+      <workItem from="1588154970726" duration="7387000" />
+      <workItem from="1588296004081" duration="345000" />
+      <workItem from="1588728259391" duration="166000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="133" y="0" key="#Notifications" timestamp="1585186115677">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="133" y="0" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1585186115677" />
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582869871536">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1582869871536" />
+    <state x="336" y="133" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583653071045">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="336" y="133" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1583653071045" />
+    <state x="402" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1584086009178">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="402" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1584086009178" />
+    <state x="308" y="88" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585991958776">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="308" y="88" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1585991958776" />
+    <state x="517" y="262" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583905063570">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="517" y="262" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1583905063570" />
+    <state x="321" y="62" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584080885001">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="321" y="62" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1584080885001" />
+    <state x="629" y="127" width="615" height="553" key="#xdebugger.evaluate" timestamp="1584085517882">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="629" y="127" width="615" height="553" key="#xdebugger.evaluate/0.0.1280.680@0.0.1280.680" timestamp="1584085517882" />
+    <state x="1174" y="408" width="676" height="505" key="#xdebugger.evaluate/0.0.1920.1032@0.0.1920.1032" timestamp="1578559730749" />
+    <state x="315" y="204" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1582885726502">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="315" y="204" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1582885726502" />
+    <state width="1278" height="548" key="DebuggerActiveHint" timestamp="1583644951937">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1278" height="548" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1583644951937" />
+    <state x="345" y="0" width="744" height="571" key="FileChooserDialogImpl" timestamp="1585990771631">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="345" y="0" width="744" height="571" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585990771631" />
+    <state x="522" y="120" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1578638906623" />
+    <state width="1227" height="255" key="GridCell.Tab.0.bottom" timestamp="1585992036032">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1227" height="255" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585992036032" />
+    <state width="1864" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1579007493569" />
+    <state width="1227" height="255" key="GridCell.Tab.0.center" timestamp="1585992036032">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1227" height="255" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585992036032" />
+    <state width="1864" height="349" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1579007493569" />
+    <state width="1227" height="255" key="GridCell.Tab.0.left" timestamp="1585992036032">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1227" height="255" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585992036032" />
+    <state width="1864" height="349" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1579007493569" />
+    <state width="1227" height="255" key="GridCell.Tab.0.right" timestamp="1585992036032">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1227" height="255" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585992036032" />
+    <state width="1864" height="349" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1579007493569" />
+    <state width="1227" height="177" key="GridCell.Tab.1.bottom" timestamp="1584088224715">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1227" height="177" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584088224715" />
+    <state width="1864" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1578645624645" />
+    <state width="1227" height="177" key="GridCell.Tab.1.center" timestamp="1584088224715">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1227" height="177" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1584088224715" />
+    <state width="1864" height="310" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" timestamp="1578645624645" />
+    <state width="1227" height="177" key="GridCell.Tab.1.left" timestamp="1584088224715">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1227" height="177" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1584088224715" />
+    <state width="1864" height="310" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" timestamp="1578645624645" />
+    <state width="1227" height="177" key="GridCell.Tab.1.right" timestamp="1584088224715">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1227" height="177" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1584088224715" />
+    <state width="1864" height="310" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1578645624645" />
+    <state x="0" y="0" width="1280" height="680" key="SettingsEditor" timestamp="1585991969676">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" width="1280" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1585991969676" />
+    <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1584085516804">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="647" height="347" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" timestamp="1584085516804" />
+    <state width="970" height="526" key="XDebugger.FullValuePopup/0.0.1920.1032@0.0.1920.1032" timestamp="1578554472450" />
+    <state x="262" y="223" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1583759338927">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="262" y="223" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1583759338927" />
+    <state x="567" y="66" width="786" height="900" key="find.popup" timestamp="1578398324874">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="567" y="66" width="786" height="900" key="find.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1578398324874" />
+    <state x="324" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1584086015020">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="324" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1584086015020" />
+    <state x="426" y="229" key="run.anything.popup" timestamp="1578402203802">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="426" y="229" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1578402203802" />
+    <state x="219" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1582884202254">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="219" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1582884202254" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FileParser/PDFParser1/WordParser.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FileParser/PdfParser/PdfParser.java</url>
+          <line>259</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FileParser/PdfParser/PdfParser.java</url>
+          <line>242</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="textPositions.get(5)" />
+        <watch expression="textPositions.get(0).endX" language="JAVA" />
+        <watch expression="firstPosition.direction" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/wordParserWithPOI_V4_1_2$WordParser.ic" NAME="WordParser Coverage Results" MODIFIED="1583765102643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>FileParser.*</FILTER>
+    </SUITE>
+  </component>
+</project>
