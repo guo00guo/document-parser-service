@@ -6,7 +6,140 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="" />
+    <list default="true" id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_47.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20160807.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_core_2_1_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/activation_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/activation_1_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Saxon-HE-9.9.1-5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/SparseBitSet-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/activation-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant-1.10.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/batik-all-1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bcpkix-jdk15on-1.62.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bcprov-jdk15on-1.62.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-collections4-4.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-lang-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-math3-3.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dom4j-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/fastjson-1.2.62.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/fontbox-2.0.19.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jaxb-core-2.3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jaxb-impl-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jbig2-imageio-3.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-4.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/log4j-core-2.12.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pdfbox-2.0.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/saxon9-9.0.0.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug.log.2020-03-09" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug.log.2020-03-11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocParser/DocParagraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocParser/DocParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocParser/DocPicture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocParser/DocTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocxParser/DocxParagraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocxParser/DocxParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocxParser/DocxPicture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocxParser/DocxTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/MyPDOutlineItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfParagraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfParser$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfPicture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/WordParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/DocParser/DocParagraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/DocParser/DocParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/DocParser/DocPicture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/DocParser/DocTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/DocxParser/DocxParagraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/DocxParser/DocxParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/DocxParser/DocxPicture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/DocxParser/DocxTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/PdfParser/PdfParagraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/PdfParser/PdfParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/PdfParser/PdfPicture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/PdfParser/PdfTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser/WordParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordParserPOI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wordParserPOI.iml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,29 +166,48 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HierarchyBrowserManager">
     <option name="SORT_ALPHABETICALLY" value="true" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1TbLZgnvfKo2Lg3yJnuCyjat1X6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="JavaMethodFindUsagesOptions.isSearchForTextOccurrences" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -68,21 +220,25 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15481833" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="FileParser" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
+      <recent name="E:\java_project\wordParserWithPOI\testData" />
+      <recent name="D:\java_project\wordParserWithPOI\pic\新建文件夹" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\lib\pdfbox" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\lib\lib" />
-      <recent name="E:\java_project\wordParserWithPOI\testData" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="FileParser.DocParser" />
@@ -90,11 +246,8 @@
       <recent name="FileParser" />
       <recent name="wordParser" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
-      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
-      <recent name="E:\java_project\wordParserWithPOI\testData" />
-      <recent name="D:\java_project\wordParserWithPOI\pic\新建文件夹" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="FileParser" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -109,7 +262,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileParser.Application" />
+      <module name="wordParserPOI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FileParser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WordParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FileParser.WordParser" />
       <module name="wordParserPOI" />
@@ -123,9 +289,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="wordParserPOI" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="FileParser.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Application.WordParser" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.WordParser" />
+        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -195,11 +374,23 @@
       <workItem from="1588154970726" duration="7387000" />
       <workItem from="1588296004081" duration="345000" />
       <workItem from="1588728259391" duration="323000" />
+      <workItem from="1588728754721" duration="8763000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -207,121 +398,69 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="133" y="0" key="#Notifications" timestamp="1585186115677">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="133" y="0" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1585186115677" />
-    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582869871536">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1582869871536" />
-    <state x="336" y="133" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583653071045">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="336" y="133" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1583653071045" />
-    <state x="402" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1584086009178">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="402" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1584086009178" />
-    <state x="308" y="88" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585991958776">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="308" y="88" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1585991958776" />
-    <state x="517" y="262" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583905063570">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="517" y="262" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1583905063570" />
-    <state x="321" y="62" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584080885001">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="321" y="62" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1584080885001" />
-    <state x="629" y="127" width="615" height="553" key="#xdebugger.evaluate" timestamp="1584085517882">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="629" y="127" width="615" height="553" key="#xdebugger.evaluate/0.0.1280.680@0.0.1280.680" timestamp="1584085517882" />
-    <state x="1174" y="408" width="676" height="505" key="#xdebugger.evaluate/0.0.1920.1032@0.0.1920.1032" timestamp="1578559730749" />
-    <state x="315" y="204" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1582885726502">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="315" y="204" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1582885726502" />
-    <state width="1278" height="548" key="DebuggerActiveHint" timestamp="1583644951937">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1278" height="548" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1583644951937" />
-    <state x="345" y="0" width="744" height="571" key="FileChooserDialogImpl" timestamp="1585990771631">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="345" y="0" width="744" height="571" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585990771631" />
-    <state x="522" y="120" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1578638906623" />
-    <state width="1227" height="255" key="GridCell.Tab.0.bottom" timestamp="1585992036032">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1227" height="255" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585992036032" />
-    <state width="1864" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1579007493569" />
-    <state width="1227" height="255" key="GridCell.Tab.0.center" timestamp="1585992036032">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1227" height="255" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585992036032" />
-    <state width="1864" height="349" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1579007493569" />
-    <state width="1227" height="255" key="GridCell.Tab.0.left" timestamp="1585992036032">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1227" height="255" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585992036032" />
-    <state width="1864" height="349" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1579007493569" />
-    <state width="1227" height="255" key="GridCell.Tab.0.right" timestamp="1585992036032">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1227" height="255" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585992036032" />
-    <state width="1864" height="349" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1579007493569" />
-    <state width="1227" height="177" key="GridCell.Tab.1.bottom" timestamp="1584088224715">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1227" height="177" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584088224715" />
-    <state width="1864" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1578645624645" />
-    <state width="1227" height="177" key="GridCell.Tab.1.center" timestamp="1584088224715">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1227" height="177" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1584088224715" />
-    <state width="1864" height="310" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" timestamp="1578645624645" />
-    <state width="1227" height="177" key="GridCell.Tab.1.left" timestamp="1584088224715">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1227" height="177" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1584088224715" />
-    <state width="1864" height="310" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" timestamp="1578645624645" />
-    <state width="1227" height="177" key="GridCell.Tab.1.right" timestamp="1584088224715">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1227" height="177" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1584088224715" />
-    <state width="1864" height="310" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1578645624645" />
-    <state x="0" y="0" width="1280" height="680" key="SettingsEditor" timestamp="1585991969676">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="0" y="0" width="1280" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1585991969676" />
-    <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1584085516804">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="647" height="347" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" timestamp="1584085516804" />
-    <state width="970" height="526" key="XDebugger.FullValuePopup/0.0.1920.1032@0.0.1920.1032" timestamp="1578554472450" />
-    <state x="262" y="223" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1583759338927">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="262" y="223" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1583759338927" />
-    <state x="567" y="66" width="786" height="900" key="find.popup" timestamp="1578398324874">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="567" y="66" width="786" height="900" key="find.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1578398324874" />
-    <state x="324" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1584086015020">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="324" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1584086015020" />
-    <state x="426" y="229" key="run.anything.popup" timestamp="1578402203802">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="426" y="229" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1578402203802" />
-    <state x="219" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1582884202254">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="219" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1582884202254" />
+    <state x="133" y="0" key="#Notifications" />
+    <state x="133" y="0" key="#Notifications/0.0.1280.680@0.0.1280.680" />
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" />
+    <state x="336" y="133" key="#com.intellij.fileTypes.FileTypeChooser" />
+    <state x="336" y="133" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" />
+    <state x="402" y="0" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="402" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" />
+    <state x="308" y="88" key="#com.intellij.ide.util.TreeClassChooserDialog" />
+    <state x="308" y="88" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" />
+    <state x="517" y="262" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" />
+    <state x="517" y="262" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" />
+    <state x="321" y="62" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" />
+    <state x="321" y="62" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" />
+    <state x="629" y="127" width="615" height="553" key="#xdebugger.evaluate" />
+    <state x="629" y="127" width="615" height="553" key="#xdebugger.evaluate/0.0.1280.680@0.0.1280.680" />
+    <state x="1174" y="408" width="676" height="505" key="#xdebugger.evaluate/0.0.1920.1032@0.0.1920.1032" />
+    <state x="315" y="204" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" />
+    <state x="315" y="204" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" />
+    <state width="1278" height="548" key="DebuggerActiveHint" />
+    <state width="1278" height="548" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" />
+    <state x="345" y="0" width="744" height="571" key="FileChooserDialogImpl" />
+    <state x="345" y="0" width="744" height="571" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" />
+    <state x="522" y="120" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" />
+    <state width="1227" height="255" key="GridCell.Tab.0.bottom" />
+    <state width="1227" height="255" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" />
+    <state width="1864" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" />
+    <state width="1227" height="255" key="GridCell.Tab.0.center" />
+    <state width="1227" height="255" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" />
+    <state width="1864" height="349" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" />
+    <state width="1227" height="255" key="GridCell.Tab.0.left" />
+    <state width="1227" height="255" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" />
+    <state width="1864" height="349" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" />
+    <state width="1227" height="255" key="GridCell.Tab.0.right" />
+    <state width="1227" height="255" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" />
+    <state width="1864" height="349" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" />
+    <state width="1227" height="177" key="GridCell.Tab.1.bottom" />
+    <state width="1227" height="177" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" />
+    <state width="1864" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" />
+    <state width="1227" height="177" key="GridCell.Tab.1.center" />
+    <state width="1227" height="177" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" />
+    <state width="1864" height="310" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" />
+    <state width="1227" height="177" key="GridCell.Tab.1.left" />
+    <state width="1227" height="177" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" />
+    <state width="1864" height="310" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" />
+    <state width="1227" height="177" key="GridCell.Tab.1.right" />
+    <state width="1227" height="177" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" />
+    <state width="1864" height="310" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" />
+    <state x="0" y="0" width="1280" height="680" key="SettingsEditor" />
+    <state x="0" y="0" width="1280" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" />
+    <state width="647" height="347" key="XDebugger.FullValuePopup" />
+    <state width="647" height="347" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" />
+    <state width="970" height="526" key="XDebugger.FullValuePopup/0.0.1920.1032@0.0.1920.1032" />
+    <state x="262" y="223" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" />
+    <state x="262" y="223" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" />
+    <state x="567" y="66" width="786" height="900" key="find.popup" />
+    <state x="567" y="66" width="786" height="900" key="find.popup/0.0.1920.1032@0.0.1920.1032" />
+    <state x="324" y="0" key="refactoring.ChangeSignatureDialog" />
+    <state x="324" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" />
+    <state x="426" y="229" key="run.anything.popup" />
+    <state x="426" y="229" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" />
+    <state x="219" y="-1" width="840" height="1034" key="search.everywhere.popup" />
+    <state x="219" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -330,16 +469,6 @@
           <url>file://$PROJECT_DIR$/src/FileParser/PDFParser1/WordParser.java</url>
           <line>141</line>
           <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/FileParser/PdfParser/PdfParser.java</url>
-          <line>259</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/FileParser/PdfParser/PdfParser.java</url>
-          <line>242</line>
-          <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
