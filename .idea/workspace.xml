@@ -7,137 +7,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20160807.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_core_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/activation_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/activation_1_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/configuration/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/controller/ParserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/dao/ParserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocSuperPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxSuperPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfSuperPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperParagraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/exception/HttpBadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/factory/WordParserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Saxon-HE-9.9.1-5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/SparseBitSet-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/activation-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ant-1.10.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/batik-all-1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bcpkix-jdk15on-1.62.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bcprov-jdk15on-1.62.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-collections4-4.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang-2.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-math3-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dom4j-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fastjson-1.2.62.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fontbox-2.0.19.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jaxb-core-2.3.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jaxb-impl-2.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jbig2-imageio-3.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-4.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-core-2.12.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pdfbox-2.0.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/saxon9-9.0.0.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/debug.log.2020-03-09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/debug.log.2020-03-11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocParser/DocParagraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocParser/DocParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocParser/DocPicture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocParser/DocTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocxParser/DocxParagraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocxParser/DocxParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocxParser/DocxPicture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/DocxParser/DocxTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/MyPDOutlineItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfParagraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfParser$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfPicture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/PdfParser/PdfTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/FileParser/WordParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wordParserPOI/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/DocParser/DocParagraph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/DocParser/DocParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/DocParser/DocPicture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/DocParser/DocTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/DocxParser/DocxParagraph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/DocxParser/DocxParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/DocxParser/DocxPicture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/DocxParser/DocxTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/PdfParser/PdfParagraph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/PdfParser/PdfParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/PdfParser/PdfPicture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/PdfParser/PdfTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser/WordParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guava-28.1-jre.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/WordParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/WordParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/DocParser/DocParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocParagraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/DocParser/DocParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/DocParser/DocPicture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/DocParser/DocTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/DocxParser/DocxParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParagraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/DocxParser/DocxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/DocxParser/DocxPicture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/DocxParser/DocxTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/PdfParser/PdfParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfParagraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/PdfParser/PdfParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/PdfParser/PdfPicture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/model/PdfParser/PdfTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FileParser/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FileParser/WordParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/DocParser/DocParagraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/DocParser/DocParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/DocParser/DocPicture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/DocParser/DocTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/DocxParser/DocxParagraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/DocxParser/DocxParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/DocxParser/DocxPicture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/DocxParser/DocxTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/PdfParser/MyPDOutlineItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/PdfParser/PdfParagraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/PdfParser/PdfParser$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/PdfParser/PdfParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/PdfParser/PdfPicture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/model/PdfParser/PdfTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testData/文档解析模块V0.3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/testData/文档解析模块V0.3.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wordParserPOI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wordParserPOI.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,6 +76,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -167,6 +101,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -211,8 +146,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -220,34 +156,36 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15481833" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
-      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
-      <recent name="E:\java_project\wordParserWithPOI\testData" />
-      <recent name="D:\java_project\wordParserWithPOI\pic\新建文件夹" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="FileParser" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\lib\pdfbox" />
-      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\lib\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mooctest.exception" />
       <recent name="FileParser.DocParser" />
       <recent name="FileParser.PdfParser" />
       <recent name="FileParser" />
       <recent name="wordParser" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="FileParser" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/resources" />
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
+      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
+      <recent name="E:\java_project\wordParserWithPOI\testData" />
+      <recent name="D:\java_project\wordParserWithPOI\pic\新建文件夹" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -263,21 +201,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FileParser.Application" />
-      <module name="wordParserPOI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="FileParser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WordParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FileParser.WordParser" />
+      <option name="MAIN_CLASS_NAME" value="com.mooctest.domainObject.WordParser" />
       <module name="wordParserPOI" />
       <extension name="coverage">
         <pattern>
@@ -291,20 +216,19 @@
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="wordParserPOI" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="FileParser.Application" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mooctest.Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Application" />
-      <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Application.WordParser" />
+      <item itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.WordParser" />
-        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -374,7 +298,8 @@
       <workItem from="1588154970726" duration="7387000" />
       <workItem from="1588296004081" duration="345000" />
       <workItem from="1588728259391" duration="323000" />
-      <workItem from="1588728754721" duration="8763000" />
+      <workItem from="1588728754721" duration="22850000" />
+      <workItem from="1589158324507" duration="22172000" />
     </task>
     <servers />
   </component>
@@ -386,7 +311,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

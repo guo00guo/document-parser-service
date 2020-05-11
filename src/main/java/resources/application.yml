@@ -1,0 +1,49 @@
+server.port: 8080
+spring.profiles.active: dev
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    # Keep the connection alive if idle for a long time (needed in production)
+    testWhileIdle: true
+    validationQuery: SELECT 1
+    # Show or not log for each sql query
+  jpa:
+    show-sql: true
+  # Hibernate ddl auto (create, create-drop, update)
+  hibernate:
+    ddl-auto: validate
+    #hbm2ddl.auto: update
+    # Naming strategy
+    naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+  # The SQL dialect makes Hibernate generate better SQL for the chosen database
+  properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+sleep: 0
+
+ #配置输出日志
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://106.14.81.62:3306/word_parser_dev?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
+    username: root
+    password: KBrhRYguzeZh4cFh
+
+---
+spring:
+  profiles: online
+  datasource:
+    url: jdbc:mysql://101.37.175.111:3306/word_parser?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
+    username: mooctest
+    password: secr3t!
