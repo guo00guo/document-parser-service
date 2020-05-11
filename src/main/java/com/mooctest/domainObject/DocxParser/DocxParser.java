@@ -25,6 +25,7 @@ import javax.xml.namespace.QName;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -212,7 +213,10 @@ public class DocxParser {
         docxParagraph.setParagraphID(index);
         docxParagraph.setFontAlignment(paragraph.getFontAlignment());
         docxParagraph.setAlignment(paragraph.getAlignment());
-        paragraph.getIndentFromRight();
+        docxParagraph.setNumFmt(paragraph.getNumFmt());
+        docxParagraph.setNumIlvl(paragraph.getNumIlvl());
+        docxParagraph.setNumLevelText(paragraph.getNumLevelText());
+        docxParagraph.setNumId(paragraph.getNumID());
 
         //解析字体格式等
         String fontName = "";
@@ -474,9 +478,23 @@ public class DocxParser {
         List<SuperParagraph> contextList = Lists.newArrayList();
 //        SimplePropertyPreFilter filter = new SimplePropertyPreFilter();
 //        filter.getExcludes().add("XWPFParagraph");
-        for (DocxParagraph docParagraph : this.docParagraphs) {
-            if (docParagraph.getLvl() < 9) {
-                contextList.add(docParagraph);
+        int[] levelCurrentValues = new int[] {0,0,0,0};
+        for (DocxParagraph paragraph : this.docParagraphs) {
+            if (paragraph.getLvl() < 9) {
+                contextList.add(paragraph);
+            }
+            if(paragraph.getNumFmt() != null){
+                String levelText = paragraph.getNumLevelText();
+                BigInteger levelDepth = paragraph.getNumIlvl();
+                if(levelText!=null) {
+                    levelCurrentValues[levelDepth.intValue()] += 1;
+                    levelText = levelText.replace("%1", "" + levelCurrentValues[0]);
+                    levelText = levelText.replace("%2", "" + levelCurrentValues[1]);
+                    levelText = levelText.replace("%3", "" + levelCurrentValues[2]);
+                    levelText = levelText.replace("%4", "" + levelCurrentValues[3]);
+                    paragraph.setNumLevelText(levelText);
+                }
+                contextList.add(paragraph);
             }
         }
         return contextList;

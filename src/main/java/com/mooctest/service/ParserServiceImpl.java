@@ -59,9 +59,9 @@ public class ParserServiceImpl implements ParserService {
     }
 
     @Override
-    public List<SuperParagraph> getAllTitle(MultipartFile uploadFile) throws IOException {
+    public List<SuperTitle> getAllTitle(MultipartFile uploadFile) throws IOException {
         WordParser wordParser = parseFile(uploadFile);
-        List<SuperParagraph> allHeads = wordParser.getAllHeads();
+        List<SuperTitle> allHeads = wordParser.getAllHeads().stream().map(para -> StyleWrapper.wrapperTitle(para)).collect(Collectors.toList());
         return allHeads;
     }
 

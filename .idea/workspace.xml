@@ -7,18 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/data/StyleWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperFontStyle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperParagraphStyle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/data/response/ResponseVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/data/response/ServerCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperTitle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/exception/ServerException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/controller/ParserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/controller/ParserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/data/StyleWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/data/StyleWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperParagraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/controller/ParserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/controller/ParserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/data/StyleWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/data/StyleWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperParagraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperParagraph.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testData/文档解析模块V0.3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/testData/文档解析模块V0.3.docx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +103,7 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/mooctest/data" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -116,15 +122,15 @@
       <recent name="FileParser" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/mooctest/data" />
       <recent name="$PROJECT_DIR$/src/main/java/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
-      <recent name="E:\java_project\wordParserWithPOI-V4.1.2\lib\pdfbox" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.mooctest.domainObject" />
       <recent name="com.mooctest.exception" />
+      <recent name="com.mooctest.domainObject" />
       <recent name="FileParser.DocParser" />
       <recent name="FileParser.PdfParser" />
       <recent name="FileParser" />
@@ -248,7 +254,7 @@
       <workItem from="1588296004081" duration="345000" />
       <workItem from="1588728259391" duration="323000" />
       <workItem from="1588728754721" duration="22850000" />
-      <workItem from="1589158324507" duration="23639000" />
+      <workItem from="1589158324507" duration="29077000" />
     </task>
     <servers />
   </component>

@@ -20,7 +20,7 @@ public interface ParserService {
 
     List<SuperTable> getAllTable(MultipartFile uploadFile) throws IOException;
 
-    List<SuperParagraph> getAllTitle(MultipartFile uploadFile) throws IOException;
+    List<SuperTitle> getAllTitle(MultipartFile uploadFile) throws IOException;
 
     List<SuperParagraph> getAllParaByTitleId(MultipartFile uploadFile, Long paraId) throws IOException;
 

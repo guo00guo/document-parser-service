@@ -11,9 +11,9 @@ import java.math.BigInteger;
  * @date 2020-05-11 15:40
  */
 @Data
-public class SuperParagraph {
+public class SuperTitle {
     private String paragraphText = null;
-    private int lvl;    // 大纲级别
+    private int lvl;       // 大纲级别
     private String numFmt;   // 标题格式
     private String numLevelText;    // 标题模板
     private BigInteger numIlvl;     // 标题深度

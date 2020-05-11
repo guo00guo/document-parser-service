@@ -1,5 +1,7 @@
 package com.mooctest.controller;
 
+import com.mooctest.data.response.ResponseVO;
+import com.mooctest.data.response.ServerCode;
 import com.mooctest.domainObject.*;
 import com.mooctest.service.ParserService;
 import io.swagger.annotations.Api;
@@ -28,38 +30,37 @@ public class ParserController {
     @RequestMapping(value = "/load_file", method = RequestMethod.POST)
     @ApiOperation(value="上传并解析文档",notes="上传并解析文档，需参数", httpMethod = "POST")
     @ResponseBody
-    public List<SuperParagraph> loadFile(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
-        return parserService.parserFile(uploadFile);
+    public ResponseVO<List<SuperParagraph>> loadFile(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.parserFile(uploadFile));
     }
 
     @RequestMapping(value = "/all_paragraphs", method = RequestMethod.POST)
     @ApiOperation(value="获取文档的所有段落信息",notes="获取文档的所有段落信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public List<SuperParagraph> getAllPara(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
-        return parserService.getAllPara(uploadFile);
+    public ResponseVO<List<SuperParagraph>> getAllPara(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getAllPara(uploadFile));
     }
 
     @RequestMapping(value = "/all_pics", method = RequestMethod.POST)
     @ApiOperation(value="获取文档的所有图片信息",notes="获取文档的所有图片信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public List<SuperPicture> getAllPic(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
-        return parserService.getAllPicture(uploadFile);
+    public ResponseVO<List<SuperPicture>> getAllPic(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getAllPicture(uploadFile));
     }
 
     @RequestMapping(value = "/all_tables", method = RequestMethod.POST)
     @ApiOperation(value="获取文档的所有表格信息",notes="获取文档的所有表格信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public List<SuperTable> getAllTable(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
-        return parserService.getAllTable(uploadFile);
+    public ResponseVO<List<SuperTable>> getAllTable(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getAllTable(uploadFile));
     }
 
     @RequestMapping(value = "/all_titles", method = RequestMethod.POST)
     @ApiOperation(value="获取文档的所有标题信息",notes="获取文档的所有标题信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public List<SuperParagraph> getAllTitle(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
-        return parserService.getAllTitle(uploadFile);
+    public ResponseVO<List<SuperTitle>> getAllTitle(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getAllTitle(uploadFile));
     }
-
 
     /**
      * 获取指定段落下的段落信息
@@ -71,24 +72,23 @@ public class ParserController {
     @RequestMapping(value = "/paragraph/{paragraph_id}", method = RequestMethod.POST)
     @ApiOperation(value="获取文档指定段落的段落信息",notes="获取文档指定标题下的所有段落信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public SuperParagraph getParaInfoByParaId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getParaInfoByParaId(uploadFile, paraId);
+    public ResponseVO<SuperParagraph> getParaInfoByParaId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getParaInfoByParaId(uploadFile, paraId));
     }
 
     @RequestMapping(value = "/paragraph/{paragraph_id}/paragraph_style", method = RequestMethod.POST)
     @ApiOperation(value="获取文档指定段落的段落格式信息",notes="获取文档指定段落的段落格式信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public SuperParagraphStyle getParaStyleByParaId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getParaStyleByParaId(uploadFile, paraId);
+    public ResponseVO<SuperParagraphStyle> getParaStyleByParaId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getParaStyleByParaId(uploadFile, paraId));
     }
 
     @RequestMapping(value = "/paragraph/{paragraph_id}/font_style", method = RequestMethod.POST)
     @ApiOperation(value="获取文档指定段落的字体格式信息",notes="获取文档指定段落的字体格式信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public SuperFontStyle getFontStyleByParaId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getFontStyleByParaId(uploadFile, paraId);
+    public ResponseVO<SuperFontStyle> getFontStyleByParaId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getFontStyleByParaId(uploadFile, paraId));
     }
-
 
     /**
      * 获取指定标题下的所有段落信息
@@ -100,22 +100,21 @@ public class ParserController {
     @RequestMapping(value = "/{paragraph_id}/all_paragraphs", method = RequestMethod.POST)
     @ApiOperation(value="获取文档指定标题下的所有段落信息",notes="获取文档指定标题下的所有段落信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public List<SuperParagraph> getAllParaByTitleId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getAllParaByTitleId(uploadFile, paraId);
+    public ResponseVO<List<SuperParagraph>> getAllParaByTitleId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getAllParaByTitleId(uploadFile, paraId));
     }
 
     @RequestMapping(value = "/{paragraph_id}/all_pics", method = RequestMethod.POST)
     @ApiOperation(value="获取文档指定标题下的所有图片信息",notes="获取文档指定标题下的所有图片信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public List<SuperPicture> getAllPictureByTitleId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getAllPictureByTitleId(uploadFile, paraId);
+    public ResponseVO<List<SuperPicture>> getAllPictureByTitleId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getAllPictureByTitleId(uploadFile, paraId));
     }
 
     @RequestMapping(value = "/{paragraph_id}/all_table", method = RequestMethod.POST)
     @ApiOperation(value="获取文档指定标题下的所有表格信息",notes="获取文档指定标题下的所有表格信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public List<SuperTable> getAllTableByTitleId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getAllTableByTitleId(uploadFile, paraId);
+    public ResponseVO<List<SuperTable>> getAllTableByTitleId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS, parserService.getAllTableByTitleId(uploadFile, paraId));
     }
-
 }
