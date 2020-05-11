@@ -1,8 +1,6 @@
 package com.mooctest.service;
 
-import com.mooctest.domainObject.SuperPicture;
-import com.mooctest.domainObject.SuperParagraph;
-import com.mooctest.domainObject.SuperTable;
+import com.mooctest.domainObject.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -32,5 +30,7 @@ public interface ParserService {
 
     SuperParagraph getParaInfoByParaId(MultipartFile uploadFile, Long paraId) throws IOException;
 
-    SuperParagraph getFontInfoByParaId(MultipartFile uploadFile, Long paraId);
+    SuperFontStyle getFontStyleByParaId(MultipartFile uploadFile, Long paraId) throws IOException;
+
+    SuperParagraphStyle getParaStyleByParaId(MultipartFile uploadFile, Long paraId) throws IOException;
 }

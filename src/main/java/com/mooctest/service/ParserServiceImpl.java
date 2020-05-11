@@ -1,9 +1,7 @@
 package com.mooctest.service;
 
-import com.mooctest.domainObject.SuperParagraph;
-import com.mooctest.domainObject.SuperPicture;
-import com.mooctest.domainObject.SuperTable;
-import com.mooctest.domainObject.WordParser;
+import com.mooctest.data.StyleWrapper;
+import com.mooctest.domainObject.*;
 import com.mooctest.exception.HttpBadRequestException;
 import com.mooctest.factory.WordParserFactory;
 import lombok.extern.slf4j.Slf4j;
@@ -152,6 +150,24 @@ public class ParserServiceImpl implements ParserService {
         if(paraId > paragraphs.size() || paraId < 1){
             throw new HttpBadRequestException("段落ID"+ paraId +"不在文档段落的所属范围内，应保证在1~" + paragraphs.size() + "之间");
         }
+    }
+
+    @Override
+    public SuperFontStyle getFontStyleByParaId(MultipartFile uploadFile, Long paraId) throws IOException {
+        WordParser wordParser = parseFile(uploadFile);
+        List<SuperParagraph> paragraphs = wordParser.getAllParagraphs();
+        checkParaIdInAllParas(paragraphs, paraId);
+        SuperParagraph superParagraph = paragraphs.get((int) (paraId - 1));
+        return StyleWrapper.wrapperFontStyle(superParagraph);
+    }
+
+    @Override
+    public SuperParagraphStyle getParaStyleByParaId(MultipartFile uploadFile, Long paraId) throws IOException {
+        WordParser wordParser = parseFile(uploadFile);
+        List<SuperParagraph> paragraphs = wordParser.getAllParagraphs();
+        checkParaIdInAllParas(paragraphs, paraId);
+        SuperParagraph superParagraph = paragraphs.get((int) (paraId - 1));
+        return StyleWrapper.wrapperParaStyle(superParagraph);
     }
 
 

@@ -1,8 +1,6 @@
 package com.mooctest.controller;
 
-import com.mooctest.domainObject.SuperPicture;
-import com.mooctest.domainObject.SuperParagraph;
-import com.mooctest.domainObject.SuperTable;
+import com.mooctest.domainObject.*;
 import com.mooctest.service.ParserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -77,11 +75,18 @@ public class ParserController {
         return parserService.getParaInfoByParaId(uploadFile, paraId);
     }
 
-    @RequestMapping(value = "/paragraph/{paragraph_id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/paragraph/{paragraph_id}/paragraph_style", method = RequestMethod.POST)
+    @ApiOperation(value="获取文档指定段落的段落格式信息",notes="获取文档指定段落的段落格式信息，需参数", httpMethod = "POST")
+    @ResponseBody
+    public SuperParagraphStyle getParaStyleByParaId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return parserService.getParaStyleByParaId(uploadFile, paraId);
+    }
+
+    @RequestMapping(value = "/paragraph/{paragraph_id}/font_style", method = RequestMethod.POST)
     @ApiOperation(value="获取文档指定段落的字体格式信息",notes="获取文档指定段落的字体格式信息，需参数", httpMethod = "POST")
     @ResponseBody
-    public SuperParagraph getFontInfoByParaId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getFontInfoByParaId(uploadFile, paraId);
+    public SuperFontStyle getFontStyleByParaId(@RequestPart(name = "file") MultipartFile uploadFile, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return parserService.getFontStyleByParaId(uploadFile, paraId);
     }
 
 
