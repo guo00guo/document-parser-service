@@ -10,11 +10,14 @@
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/DocxParser/DocxTable.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/PdfParser/PdfTable.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/DocxParser/DocxParser.java
+/Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/configuration/RedisAutoConfiguration.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/utils/ReadWordTable.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/SuperParagraphStyle.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/data/StyleWrapper.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/DocParser/DocParagraph.java
+/Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/service/RedisUtil.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/data/response/ResponseVO.java
+/Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/service/ParserAsyncImpl.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/factory/WordParserFactory.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/exception/ServerException.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/controller/ParserController.java
@@ -24,6 +27,7 @@
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/service/ParserService.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/DocxParser/DocxParagraph.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/utils/ExportTable.java
+/Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/configuration/RedisConfig.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/SuperParagraph.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/SuperFontStyle.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/SuperTable.java

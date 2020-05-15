@@ -5,10 +5,11 @@ import lombok.Data;
 import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.UnderlinePatterns;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 
 @Data
-public class DocxParagraph extends SuperParagraph {
+public class DocxParagraph extends SuperParagraph implements Serializable {
 //    private String paragraphText = null;
 //    private int lvl;    // 大纲级别
 //    private int FontSize;

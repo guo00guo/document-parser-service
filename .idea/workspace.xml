@@ -7,9 +7,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/configuration/RedisAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/configuration/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserAsyncImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/RedisUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileTemp/doc-1589526721124-897e7406-2fc0-4998-975a-82915ab86fe7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileTemp/doc-1589526762237-da21fb03-7e9f-4d12-925e-a1c2d5568eed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileTemp/doc-1589526788577-0bf313e6-d9e6-4bb3-8362-3533ee35ce7f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileTemp/doc-1589526889402-e140303e-23e3-439b-ab3e-e06c177af0de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileTemp/doc-1589527029758-c2c3a892-acc4-4e5f-82c4-3196277fe7a9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileTemp/doc-1589527395409-8a00bd6a-6699-4a5b-bd9a-2ad9510794af.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileTemp/docx-1589522565002-d68acaac-58cb-4256-b71f-91ea21f1d47e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileTemp/pdf-1589522732133-b9e96b85-d4ea-404a-9e5b-b389cf5bdcb4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/controller/ParserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/controller/ParserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordParserPOI-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wordParserPOI-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocParagraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocPicture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocPicture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParagraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxPicture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxPicture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfParagraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfPicture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfPicture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperFontStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperFontStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperParagraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperParagraphStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperParagraphStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperPicture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperPicture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/WordParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/WordParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/controller/ParserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/controller/ParserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocParagraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocParagraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocPicture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocPicture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxParagraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxParagraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxPicture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxPicture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/MyPDOutlineItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/MyPDOutlineItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfParagraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfParagraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfParser$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfPicture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfPicture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperFontStyle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperFontStyle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperParagraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperParagraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperParagraphStyle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperParagraphStyle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperPicture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperPicture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/WordParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/WordParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordParserPOI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wordParserPOI.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +152,7 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/mooctest/utils" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -107,11 +171,11 @@
       <recent name="FileParser" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/mooctest/utils" />
+      <recent name="$PROJECT_DIR$/src/main/java/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/mooctest/data" />
-      <recent name="$PROJECT_DIR$/src/main/java/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.mooctest.exception" />
@@ -289,7 +353,8 @@
       <workItem from="1589351478133" duration="4655000" />
       <workItem from="1589361232451" duration="9069000" />
       <workItem from="1589378306251" duration="1364000" />
-      <workItem from="1589416506003" duration="28644000" />
+      <workItem from="1589416506003" duration="39408000" />
+      <workItem from="1589542712664" duration="3517000" />
     </task>
     <servers />
   </component>

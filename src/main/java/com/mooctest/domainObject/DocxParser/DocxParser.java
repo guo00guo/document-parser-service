@@ -23,13 +23,14 @@ import javax.xml.namespace.QName;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Data
-public class DocxParser {
+public class DocxParser implements Serializable {
     private transient File file;
     private transient InputStream stream = null;
     private transient XWPFDocument document = null;

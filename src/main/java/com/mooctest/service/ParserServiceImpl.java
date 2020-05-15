@@ -16,9 +16,12 @@ import com.mooctest.domainObject.PdfParser.PdfPicture;
 import com.mooctest.domainObject.PdfParser.PdfTable;
 import com.mooctest.domainObject.*;
 import com.mooctest.exception.HttpBadRequestException;
-import com.mooctest.factory.WordParserFactory;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -27,6 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -37,20 +41,14 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ParserServiceImpl implements ParserService {
 
-//    @Override
-//    public List<SuperParagraph> parserFile(String token){
-//        WordParser wordParser = parseFile(uploadFile);
-//
-//        List<SuperParagraph> paragraphsPre = wordParser.getAllParagraphs();
-//        int i = 0;
-//        for (SuperParagraph paragraph : paragraphsPre) {
-//            System.out.println(i + " " + paragraph.toString());
-//            i++;
-//        }
-//
-//        List<SuperParagraph> paragraphs = wordParser.getAllParagraphs();
-//        return paragraphs;
-//    }
+    @Autowired
+    private RedisTemplate<Object,Object> redisTemplate;
+    @Autowired
+    private ParserAsyncImpl parserAsync;
+    @Value("${redis.timeout}")
+    private int EXP_TIMES;
+    @Value("${redis.release}")
+    private int RELEASE_TIMES;
 
     @Override
     public String parserFile(MultipartFile uploadFile) throws IOException {
@@ -60,28 +58,40 @@ public class ParserServiceImpl implements ParserService {
 
     @Override
     public List<SuperParagraph> getAllPara(String token){
-        WordParser wordParser = getObjectFromJsonFile(token);
+//        checkToken(token);
+        WordParser wordParser = getResultBean(token);
         List<SuperParagraph> paragraphs = wordParser.getAllParagraphs();
         return paragraphs;
     }
 
+    private void checkToken(String token) {
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        Object redisContent = valueOperations.get(token);
+        Object redisContentTemplate = valueOperations.get(token + "-" + EXP_TIMES);
+        if(redisContent == null && redisContentTemplate == null){
+            throw new HttpBadRequestException("token已失效！");
+        }else if(redisContent == null && redisContentTemplate != null){
+            throw new HttpBadRequestException("正在解析中！");
+        }
+    }
+
     @Override
     public List<SuperPicture> getAllPicture(String token){
-        WordParser wordParser = getObjectFromJsonFile(token);
+        WordParser wordParser = getResultBean(token);
         List<SuperPicture> allSuperPictures = wordParser.getAllPictures();
         return allSuperPictures;
     }
 
     @Override
     public List<SuperTable> getAllTable(String token){
-        WordParser wordParser = getObjectFromJsonFile(token);
+        WordParser wordParser = getResultBean(token);
         List<SuperTable> allSuperTables = wordParser.getAllTables();
         return allSuperTables;
     }
 
     @Override
     public List<SuperParagraph> getAllTitle(String token){
-        WordParser wordParser = getObjectFromJsonFile(token);
+        WordParser wordParser = getResultBean(token);
         if(token.startsWith("pdf")){
             throw new HttpBadRequestException("暂不支持pdf的标题获取！");
         }
@@ -92,7 +102,7 @@ public class ParserServiceImpl implements ParserService {
 
     @Override
     public List<SuperParagraph> getAllParaByTitleId(String token, Long paraId){
-        WordParser wordParser = getObjectFromJsonFile(token);
+        WordParser wordParser = getResultBean(token);
         List<SuperParagraph> allHeads = wordParser.getAllHeads();
         // 检验标题ID是否在文档标题的所属范围内
         checkParaIdInAllTitles(allHeads, paraId);
@@ -111,7 +121,7 @@ public class ParserServiceImpl implements ParserService {
 
     @Override
     public List<SuperPicture> getAllPictureByTitleId(String token, Long paraId){
-        WordParser wordParser = getObjectFromJsonFile(token);
+        WordParser wordParser = getResultBean(token);
         List<SuperParagraph> allHeads = wordParser.getAllHeads();
         // 检验标题ID是否在文档标题的所属范围内
         checkParaIdInAllTitles(allHeads, paraId);
@@ -130,7 +140,7 @@ public class ParserServiceImpl implements ParserService {
 
     @Override
     public List<SuperTable> getAllTableByTitleId(String token, Long paraId){
-        WordParser wordParser = getObjectFromJsonFile(token);
+        WordParser wordParser = getResultBean(token);
         List<SuperParagraph> allHeads = wordParser.getAllHeads();
 
         // 检验标题ID是否在文档标题的所属范围内
@@ -193,7 +203,7 @@ public class ParserServiceImpl implements ParserService {
 
     @Override
     public SuperParagraph getParaInfoByParaId(String token, Long paraId){
-        WordParser wordParser = getObjectFromJsonFile(token);
+        WordParser wordParser = getResultBean(token);
         List<SuperParagraph> paragraphs = wordParser.getAllParagraphs();
         checkParaIdInAllParas(paragraphs, paraId);
         return paragraphs.get((int) (paraId - 1));
@@ -207,7 +217,7 @@ public class ParserServiceImpl implements ParserService {
 
     @Override
     public SuperFontStyle getFontStyleByParaId(String token, Long paraId){
-        WordParser wordParser = getObjectFromJsonFile(token);
+        WordParser wordParser = getResultBean(token);
         List<SuperParagraph> paragraphs = wordParser.getAllParagraphs();
         checkParaIdInAllParas(paragraphs, paraId);
         SuperParagraph superParagraph = paragraphs.get((int) (paraId - 1));
@@ -216,41 +226,94 @@ public class ParserServiceImpl implements ParserService {
 
     @Override
     public SuperParagraphStyle getParaStyleByParaId(String token, Long paraId){
-        WordParser wordParser = getObjectFromJsonFile(token);
+        WordParser wordParser = getResultBean(token);
         List<SuperParagraph> paragraphs = wordParser.getAllParagraphs();
         checkParaIdInAllParas(paragraphs, paraId);
         SuperParagraph superParagraph = paragraphs.get((int) (paraId - 1));
         return StyleWrapper.wrapperParaStyle(superParagraph);
     }
 
+    @Override
+    public String deleteParserTaskByToken(String token) {
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        Object redisContent = valueOperations.get(token);
+        Object redisContentTemplate = valueOperations.get(token + "-" + EXP_TIMES);
+        if(redisContent == null && redisContentTemplate == null){
+            return "token已失效！无需重复释放资源！";
+        }
+        if(redisContent != null){
+            valueOperations.set(token, true, RELEASE_TIMES, TimeUnit.SECONDS);
+        }
+        if(redisContentTemplate != null){
+            valueOperations.set(token + "-" + EXP_TIMES, true, RELEASE_TIMES, TimeUnit.SECONDS);
+        }
+        return "资源释放成功";
+    }
 
-//    private WordParser parseFile(MultipartFile uploadFile) throws IOException {
-//        String fileName = uploadFile.getOriginalFilename();
-//        WordParser wordParser = WordParserFactory.createWordParser();
-//        wordParser.parser(uploadFile, fileName);
-//        return wordParser;
-//    }
+    /**
+     * 获取javabean
+     * @param token
+     * @return
+     */
+    private WordParser getResultBean(String token) {
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        Object redisContent = valueOperations.get(token);
+        Object redisContentTemplate = valueOperations.get(token + "-" + EXP_TIMES);
+        if(redisContent == null && redisContentTemplate == null){
+            throw new HttpBadRequestException("token已失效！");
+        }else if(redisContent == null && redisContentTemplate != null){
+            throw new HttpBadRequestException("正在解析中！");
+        }
+        return getResultFromRedis((String) redisContent);
+    }
 
+    /**
+     * 将文件解析结果存入redis中
+     * @param uploadFile
+     * @return
+     * @throws IOException
+     */
     private String parseFileContent(MultipartFile uploadFile) throws IOException {
         String fileName = uploadFile.getOriginalFilename();
         String uuid = UUID.randomUUID().toString();
-        WordParser wordParser = WordParserFactory.createWordParser();
-        wordParser.parser(uploadFile, fileName);
-        String absolutePath = System.getProperty("user.dir");
-        String path = absolutePath + "/fileTemp/";
 
+        // 生成token
         String fileLowerName = fileName.toLowerCase();
         String fileType = fileLowerName.substring(fileLowerName.lastIndexOf(".") + 1, fileLowerName.length());
         String token = fileType + "-" + System.currentTimeMillis() + "-" + uuid;
-        String filePath = path + token + ".json";
-        boolean createFileFlag = createJsonFile(wordParser, filePath);
+        parserAsync.asyncParserFile(uploadFile, fileName, token);
 
-        if(createFileFlag){
-            return token;
-        }else{
-            throw new HttpBadRequestException("文档解析失败！");
-        }
+        // 设置临时的redis缓存，用于判断正在解析中
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        valueOperations.set(token + "-" + EXP_TIMES, true, EXP_TIMES, TimeUnit.SECONDS);
+        return token;
+    }
 
+    // 重redis中获取javabean
+    private WordParser getResultFromRedis(String redisContent) {
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("docParser", DocParser.class);
+        map.put("docxParser", DocxParser.class);
+        map.put("pdfParser", PdfParser.class);
+
+        map.put("docxParagraphs", DocxParagraph.class);
+        map.put("docxTables", DocxTable.class);
+        map.put("docxTableContent", DocxParagraph.class);
+        map.put("docxPictures", DocxPicture.class);
+
+        map.put("docParagraphs", DocParagraph.class);
+        map.put("docTables", DocTable.class);
+        map.put("docPictures", DocPicture.class);
+        map.put("docTableContent", DocParagraph.class);
+
+        map.put("pdfParagraphs", PdfParagraph.class);
+        map.put("pdfTables", PdfTable.class);
+        map.put("pdfPictures", PdfPicture.class);
+        map.put("pdfTableContent", PdfParagraph.class);
+
+        WordParser wordParser = (WordParser) JSONObject.toBean(JSONObject.fromObject(redisContent), WordParser.class, map);
+        return wordParser;
     }
 
     /**
@@ -287,6 +350,11 @@ public class ParserServiceImpl implements ParserService {
         return flag;
     }
 
+    /**
+     * 重json文件中获取JavaBean
+     * @param token
+     * @return
+     */
     private WordParser getObjectFromJsonFile(String token) {
         String absolutePath = System.getProperty("user.dir");
         String path = absolutePath + "/fileTemp/";
@@ -312,7 +380,6 @@ public class ParserServiceImpl implements ParserService {
         map.put("pdfTables", PdfTable.class);
         map.put("pdfPictures", PdfPicture.class);
         map.put("pdfTableContent", PdfParagraph.class);
-
         WordParser wordParser = (WordParser) JSONObject.toBean(JSONObject.fromObject(jsonData), WordParser.class, map);
         return wordParser;
     }

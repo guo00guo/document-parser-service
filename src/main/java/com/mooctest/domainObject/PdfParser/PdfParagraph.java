@@ -3,8 +3,10 @@ package com.mooctest.domainObject.PdfParser;
 import com.mooctest.domainObject.SuperParagraph;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class PdfParagraph extends SuperParagraph {
+public class PdfParagraph extends SuperParagraph implements Serializable {
 //    private String paragraphText = null;
 //    private int paragraphID;
 //    private String FontName = "宋体";

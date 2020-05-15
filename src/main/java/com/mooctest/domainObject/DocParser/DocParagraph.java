@@ -3,8 +3,10 @@ package com.mooctest.domainObject.DocParser;
 import com.mooctest.domainObject.SuperParagraph;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class DocParagraph extends SuperParagraph {
+public class DocParagraph extends SuperParagraph implements Serializable {
 //    private int lvl;
     private int llvl;
     private int linfo;

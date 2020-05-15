@@ -3,11 +3,12 @@ package com.mooctest.domainObject.DocxParser;
 import com.mooctest.domainObject.SuperTable;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class DocxTable extends SuperTable {
+public class DocxTable extends SuperTable implements Serializable {
 //    private String textBefore;
 //    private String textAfter;
 //    private DocxParagraph paragraphBefore;

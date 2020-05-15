@@ -15,11 +15,12 @@ import org.apache.poi.hwpf.usermodel.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class DocParser {
+public class DocParser implements Serializable {
     private transient File file;
     private transient InputStream stream = null;
     private transient HWPFDocument document = null;

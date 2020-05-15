@@ -5,8 +5,10 @@ import com.mooctest.domainObject.SuperParagraph;
 import com.mooctest.domainObject.SuperPicture;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class PdfPicture extends SuperPicture {
+public class PdfPicture extends SuperPicture implements Serializable {
     private double height;
     private double width;
 //    private String suggestFileExtension;

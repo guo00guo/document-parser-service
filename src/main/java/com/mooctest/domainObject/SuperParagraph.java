@@ -2,6 +2,7 @@ package com.mooctest.domainObject;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 
 /**
@@ -9,7 +10,7 @@ import java.math.BigInteger;
  * @date 2020-05-11 15:40
  */
 @Data
-public class SuperParagraph {
+public class SuperParagraph implements Serializable {
     private String paragraphText = null;
     private int lvl;    // 大纲级别
     private int fontSize;

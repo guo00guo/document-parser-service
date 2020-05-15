@@ -2,6 +2,7 @@ com/mooctest/exception/HttpBadRequestException.class
 com/mooctest/data/response/ServerCode.class
 com/mooctest/domainObject/WordParser.class
 com/mooctest/domainObject/SuperParagraph.class
+com/mooctest/service/RedisUtil.class
 com/mooctest/controller/ParserController.class
 com/mooctest/domainObject/DocParser/DocParagraph.class
 com/mooctest/domainObject/PdfParser/PdfParser.class
@@ -9,6 +10,7 @@ com/mooctest/domainObject/SuperParagraphStyle.class
 com/mooctest/configuration/SwaggerConfig.class
 com/mooctest/service/ParserServiceImpl.class
 com/mooctest/utils/ExportTable.class
+com/mooctest/service/ParserAsyncImpl.class
 com/mooctest/exception/ServerException.class
 com/mooctest/domainObject/DocxParser/DocxPicture.class
 com/mooctest/domainObject/PdfParser/MyPDOutlineItem.class
@@ -17,6 +19,7 @@ com/mooctest/domainObject/DocParser/DocTable.class
 com/mooctest/domainObject/PdfParser/PdfParser$1.class
 com/mooctest/domainObject/DocParser/DocPicture.class
 com/mooctest/domainObject/DocParser/DocParser.class
+com/mooctest/configuration/RedisConfig.class
 com/mooctest/domainObject/DocxParser/DocxParser.class
 com/mooctest/data/response/ResponseVO.class
 com/mooctest/factory/WordParserFactory.class

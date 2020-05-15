@@ -2,12 +2,14 @@ package com.mooctest.domainObject;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author guochao
  * @date 2020-05-11 15:28
  */
 @Data
-public class SuperPicture {
+public class SuperPicture implements Serializable {
     private String textBefore;
     private String textAfter;
     private SuperParagraph paragraphBefore;

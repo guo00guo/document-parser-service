@@ -4,16 +4,14 @@ import com.mooctest.domainObject.DocParser.DocParser;
 import com.mooctest.domainObject.DocxParser.DocxParser;
 import com.mooctest.domainObject.PdfParser.PdfParser;
 import lombok.Data;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 @Data
-public class WordParser {
+public class WordParser implements Serializable {
     private transient File file;
     private DocParser docParser;
     private DocxParser docxParser;
@@ -32,6 +30,7 @@ public class WordParser {
         this.fileType = fileType;
     }
 
+    @Async
     public WordParser parser(MultipartFile uploadFile, String fileName) throws IOException {
         String absolutePath = System.getProperty("user.dir");
         String path = absolutePath + "/fileTemp/";

@@ -33,4 +33,6 @@ public interface ParserService {
     SuperFontStyle getFontStyleByParaId(String token, Long paraId);
 
     SuperParagraphStyle getParaStyleByParaId(String token, Long paraId);
+
+    String deleteParserTaskByToken(String token);
 }

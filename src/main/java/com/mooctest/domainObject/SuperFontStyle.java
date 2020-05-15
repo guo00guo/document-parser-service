@@ -3,12 +3,14 @@ package com.mooctest.domainObject;
 import lombok.Data;
 import org.apache.poi.xwpf.usermodel.UnderlinePatterns;
 
+import java.io.Serializable;
+
 /**
  * @author guochao
  * @date 2020-05-11 18:12
  */
 @Data
-public class SuperFontStyle {
+public class SuperFontStyle implements Serializable {
     private int FontSize;
     private String FontName = "宋体";
     private String asciiFontName = "";

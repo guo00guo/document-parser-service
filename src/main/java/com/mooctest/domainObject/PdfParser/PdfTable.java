@@ -3,12 +3,13 @@ package com.mooctest.domainObject.PdfParser;
 import com.mooctest.domainObject.SuperTable;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
 @Data
-public class PdfTable extends SuperTable {
+public class PdfTable extends SuperTable implements Serializable {
 //    private String textBefore;
 //    private String textAfter;
 //    private PdfParagraph paragraphBefore;

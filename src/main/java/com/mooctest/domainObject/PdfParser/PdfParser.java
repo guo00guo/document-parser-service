@@ -21,10 +21,7 @@ import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -32,7 +29,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Data
-class MyPDOutlineItem {
+class MyPDOutlineItem implements Serializable {
     private PDOutlineItem pdOutlineItem;
     private int level;
     private String title;
@@ -43,10 +40,12 @@ class MyPDOutlineItem {
         this.level = level;
         this.title = pdOutlineItem.getTitle().trim().replaceAll(" ","");
     }
+
+    MyPDOutlineItem(){}
 }
 
 @Data
-public class PdfParser {
+public class PdfParser implements Serializable {
     private transient File file;
     private transient InputStream stream = null;
     private transient PDDocument document = null;

@@ -4,8 +4,10 @@ import com.mooctest.domainObject.SuperParagraph;
 import com.mooctest.domainObject.SuperPicture;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class DocxPicture extends SuperPicture {
+public class DocxPicture extends SuperPicture implements Serializable {
 //    private String textBefore;
 //    private String textAfter;
 //    private DocxParagraph paragraphBefore;
