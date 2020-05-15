@@ -8,64 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-codec-1.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-compress-1.19.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-math3-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pdfbox-2.0.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi-4.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi-excelant-4.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi-ooxml-4.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi-scratchpad-4.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/poi.ooxml.main.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/xmlbeans-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocParser/DocTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/DocxParser/DocxParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/PdfParser/PdfTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/domainObject/SuperTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/utils/ReadWordTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/utils/ReadWordTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/wordParserPOI.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/configuration/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/controller/ParserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/dao/ParserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/data/StyleWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/data/response/ResponseVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/data/response/ServerCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocParagraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocSuperPicture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocParser/DocTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxParagraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxSuperPicture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/DocxParser/DocxTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/MyPDOutlineItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfParagraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfParser$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfSuperPicture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/PdfParser/PdfTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperFontStyle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperParagraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperParagraphStyle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperPicture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/SuperTitle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/domainObject/WordParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/exception/HttpBadRequestException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/exception/ServerException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/factory/WordParserFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/service/ParserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testData/~$解析模块V0.3.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testData/文档解析模块V0.3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/testData/文档解析模块V0.3.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordParserPOI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wordParserPOI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/controller/ParserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/controller/ParserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/controller/ParserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/controller/ParserController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,11 +121,11 @@
       <recent name="FileParser" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/resources" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\testData" />
       <recent name="E:\java_project\wordParserWithPOI-V4.1.2\src" />
       <recent name="E:\java_project\wordParserWithPOI\testData" />
-      <recent name="D:\java_project\wordParserWithPOI\pic\新建文件夹" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -345,7 +289,7 @@
       <workItem from="1589351478133" duration="4655000" />
       <workItem from="1589361232451" duration="9069000" />
       <workItem from="1589378306251" duration="1364000" />
-      <workItem from="1589416506003" duration="26988000" />
+      <workItem from="1589416506003" duration="28263000" />
     </task>
     <servers />
   </component>

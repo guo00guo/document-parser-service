@@ -1,5 +1,7 @@
 package com.mooctest.controller;
 
+import com.mooctest.data.response.ResponseVO;
+import com.mooctest.data.response.ServerCode;
 import com.mooctest.domainObject.*;
 import com.mooctest.service.ParserService;
 import io.swagger.annotations.Api;
@@ -10,7 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author guochao
@@ -25,39 +29,41 @@ public class ParserController {
     @Autowired
     private ParserService parserService;
 
-    @RequestMapping(value = "/load_file", method = RequestMethod.POST, produces="text/plain;charset=UTF-8")
+    @RequestMapping(value = "/load_file", method = RequestMethod.POST)
     @ApiOperation(value="上传并解析文档",notes="上传并解析文档，需参数", httpMethod = "POST")
     @ResponseBody
-    public String loadFile(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
-        return parserService.parserFile(uploadFile);
+    public ResponseVO<Map<String, String>> loadFile(@RequestPart(name = "file") MultipartFile uploadFile) throws IOException {
+        Map<String, String> map = new HashMap<>();
+        map.put("token",parserService.parserFile(uploadFile));
+        return new ResponseVO<>(ServerCode.SUCCESS,map);
     }
 
     @RequestMapping(value = "/{token}/all_paragraphs", method = RequestMethod.GET)
     @ApiOperation(value="获取文档的所有段落信息",notes="获取文档的所有段落信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public List<SuperParagraph> getAllPara(@PathVariable(name = "token") String token){
-        return parserService.getAllPara(token);
+    public ResponseVO<List<SuperParagraph>> getAllPara(@PathVariable(name = "token") String token){
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllPara(token));
     }
 
     @RequestMapping(value = "/{token}/all_pics", method = RequestMethod.GET)
     @ApiOperation(value="获取文档的所有图片信息",notes="获取文档的所有图片信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public List<SuperPicture> getAllPic(@PathVariable(name = "token") String token) throws IOException {
-        return parserService.getAllPicture(token);
+    public ResponseVO<List<SuperPicture>> getAllPic(@PathVariable(name = "token") String token) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllPicture(token));
     }
 
     @RequestMapping(value = "/{token}/all_tables", method = RequestMethod.GET)
     @ApiOperation(value="获取文档的所有表格信息",notes="获取文档的所有表格信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public List<SuperTable> getAllTable(@PathVariable(name = "token") String token) throws IOException {
-        return parserService.getAllTable(token);
+    public ResponseVO<List<SuperTable>> getAllTable(@PathVariable(name = "token") String token) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllTable(token));
     }
 
     @RequestMapping(value = "/{token}/all_titles", method = RequestMethod.GET)
     @ApiOperation(value="获取文档的所有标题信息",notes="获取文档的所有标题信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public List<SuperParagraph> getAllTitle(@PathVariable(name = "token") String token) throws IOException {
-        return parserService.getAllTitle(token);
+    public ResponseVO<List<SuperParagraph>> getAllTitle(@PathVariable(name = "token") String token) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllTitle(token));
     }
 
     /**
@@ -70,22 +76,22 @@ public class ParserController {
     @RequestMapping(value = "/{token}/paragraph/{paragraph_id}", method = RequestMethod.GET)
     @ApiOperation(value="获取文档指定段落的段落信息",notes="获取文档指定标题下的所有段落信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public SuperParagraph getParaInfoByParaId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getParaInfoByParaId(token, paraId);
+    public ResponseVO<SuperParagraph> getParaInfoByParaId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getParaInfoByParaId(token, paraId));
     }
 
     @RequestMapping(value = "/{token}/paragraph/{paragraph_id}/paragraph_style", method = RequestMethod.GET)
     @ApiOperation(value="获取文档指定段落的段落格式信息",notes="获取文档指定段落的段落格式信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public SuperParagraphStyle getParaStyleByParaId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getParaStyleByParaId(token, paraId);
+    public ResponseVO<SuperParagraphStyle> getParaStyleByParaId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getParaStyleByParaId(token, paraId));
     }
 
     @RequestMapping(value = "/{token}/paragraph/{paragraph_id}/font_style", method = RequestMethod.GET)
     @ApiOperation(value="获取文档指定段落的字体格式信息",notes="获取文档指定段落的字体格式信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public SuperFontStyle getFontStyleByParaId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getFontStyleByParaId(token, paraId);
+    public ResponseVO<SuperFontStyle> getFontStyleByParaId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getFontStyleByParaId(token, paraId));
     }
 
     /**
@@ -98,21 +104,21 @@ public class ParserController {
     @RequestMapping(value = "/{token}/{paragraph_id}/all_paragraphs", method = RequestMethod.GET)
     @ApiOperation(value="获取文档指定标题下的所有段落信息",notes="获取文档指定标题下的所有段落信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public List<SuperParagraph> getAllParaByTitleId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getAllParaByTitleId(token, paraId);
+    public ResponseVO<List<SuperParagraph>> getAllParaByTitleId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllParaByTitleId(token, paraId));
     }
 
     @RequestMapping(value = "/{token}/{paragraph_id}/all_pics", method = RequestMethod.GET)
     @ApiOperation(value="获取文档指定标题下的所有图片信息",notes="获取文档指定标题下的所有图片信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public List<SuperPicture> getAllPictureByTitleId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getAllPictureByTitleId(token, paraId);
+    public ResponseVO<List<SuperPicture>> getAllPictureByTitleId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllPictureByTitleId(token, paraId));
     }
 
     @RequestMapping(value = "/{token}/{paragraph_id}/all_table", method = RequestMethod.GET)
     @ApiOperation(value="获取文档指定标题下的所有表格信息",notes="获取文档指定标题下的所有表格信息，需参数", httpMethod = "GET")
     @ResponseBody
-    public List<SuperTable> getAllTableByTitleId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
-        return parserService.getAllTableByTitleId(token, paraId);
+    public ResponseVO<List<SuperTable>> getAllTableByTitleId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) throws IOException {
+        return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllTableByTitleId(token, paraId));
     }
 }
