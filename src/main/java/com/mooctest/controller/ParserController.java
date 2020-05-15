@@ -21,7 +21,7 @@ import java.util.Map;
  * @date 2020-05-08 15:46
  */
 @RestController
-@RequestMapping("/api/word_parser")
+@RequestMapping("/word_parser")
 @Slf4j
 @Api(value="parser",tags="文档解析的相关接口")
 public class ParserController {
