@@ -12,25 +12,25 @@ import java.util.List;
  */
 
 public interface ParserService {
-    List<SuperParagraph> parserFile(MultipartFile uploadFile) throws IOException;
+    String parserFile(MultipartFile uploadFile) throws IOException;
 
-    List<SuperParagraph> getAllPara(MultipartFile uploadFile) throws IOException;
+    List<SuperParagraph> getAllPara(String token);
 
-    List<SuperPicture> getAllPicture(MultipartFile uploadFile) throws IOException;
+    List<SuperPicture> getAllPicture(String token);
 
-    List<SuperTable> getAllTable(MultipartFile uploadFile) throws IOException;
+    List<SuperTable> getAllTable(String token);
 
-    List<SuperTitle> getAllTitle(MultipartFile uploadFile) throws IOException;
+    List<SuperParagraph> getAllTitle(String token);
 
-    List<SuperParagraph> getAllParaByTitleId(MultipartFile uploadFile, Long paraId) throws IOException;
+    List<SuperParagraph> getAllParaByTitleId(String token, Long paraId);
 
-    List<SuperPicture> getAllPictureByTitleId(MultipartFile uploadFile, Long paraId) throws IOException;
+    List<SuperPicture> getAllPictureByTitleId(String token, Long paraId);
 
-    List<SuperTable> getAllTableByTitleId(MultipartFile uploadFile, Long paraId) throws IOException;
+    List<SuperTable> getAllTableByTitleId(String token, Long paraId);
 
-    SuperParagraph getParaInfoByParaId(MultipartFile uploadFile, Long paraId) throws IOException;
+    SuperParagraph getParaInfoByParaId(String token, Long paraId);
 
-    SuperFontStyle getFontStyleByParaId(MultipartFile uploadFile, Long paraId) throws IOException;
+    SuperFontStyle getFontStyleByParaId(String token, Long paraId);
 
-    SuperParagraphStyle getParaStyleByParaId(MultipartFile uploadFile, Long paraId) throws IOException;
+    SuperParagraphStyle getParaStyleByParaId(String token, Long paraId);
 }

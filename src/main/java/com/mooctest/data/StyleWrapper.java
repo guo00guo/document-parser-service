@@ -3,7 +3,6 @@ package com.mooctest.data;
 import com.mooctest.domainObject.SuperFontStyle;
 import com.mooctest.domainObject.SuperParagraph;
 import com.mooctest.domainObject.SuperParagraphStyle;
-import com.mooctest.domainObject.SuperTitle;
 import org.springframework.beans.BeanUtils;
 
 /**
@@ -22,11 +21,5 @@ public class StyleWrapper {
         SuperParagraphStyle superParagraphStyle = new SuperParagraphStyle();
         BeanUtils.copyProperties(superParagraph, superParagraphStyle);
         return superParagraphStyle;
-    }
-
-    public static SuperTitle wrapperTitle(SuperParagraph superParagraph){
-        SuperTitle superTitle = new SuperTitle();
-        BeanUtils.copyProperties(superParagraph, superTitle);
-        return superTitle;
     }
 }

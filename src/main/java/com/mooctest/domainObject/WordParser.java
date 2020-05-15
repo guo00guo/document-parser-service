@@ -14,15 +14,27 @@ import java.util.List;
 
 @Data
 public class WordParser {
-    private File file;
+    private transient File file;
     private DocParser docParser;
     private DocxParser docxParser;
     private PdfParser pdfParser;
     private String ext = null;
     private String fileType = "";
 
-    public boolean parser(MultipartFile uploadFile, String fileName) throws IOException {
-        String path = "/Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/resources/fileTemp/";
+    public WordParser() {}
+
+    public WordParser(File file, DocParser docParser, DocxParser docxParser, PdfParser pdfParser, String ext, String fileType) {
+        this.file = file;
+        this.docParser = docParser;
+        this.docxParser = docxParser;
+        this.pdfParser = pdfParser;
+        this.ext = ext;
+        this.fileType = fileType;
+    }
+
+    public WordParser parser(MultipartFile uploadFile, String fileName) throws IOException {
+        String absolutePath = System.getProperty("user.dir");
+        String path = absolutePath + "/src/main/java/resources/fileTemp/";
         File destFile = new File(path, fileName);
         // 将MultipartFile存到临时文件中
         uploadFile.transferTo(destFile);
@@ -36,10 +48,12 @@ public class WordParser {
                 docParser = new DocParser(this.getFile());
                 this.setExt(".doc");
                 this.setFileType(".doc");
-                return true;
+                deleteFile(destFile);
+                return this;
             } catch (Exception e) {
                 e.printStackTrace();
-                return false;
+                deleteFile(destFile);
+                return null;
             }
         }
         else if (fileLowerName.endsWith(".docx")) {
@@ -48,11 +62,11 @@ public class WordParser {
                 this.setExt(".docx");
                 this.setFileType(".docx");
                 deleteFile(destFile);
-                return true;
+                return this;
             } catch (Exception e) {
                 e.printStackTrace();
                 deleteFile(destFile);
-                return false;
+                return null;
             }
         }
 //        else if (fileLowerName.endsWith(".wps")) {
@@ -66,18 +80,20 @@ public class WordParser {
 //                return false;
 //            }
 //        }
-//        else if (fileLowerName.endsWith(".pdf")) {
-//            try {
-//                pdfParser = new PdfParser();
-//                this.setExt(".pdf");
-//                this.setFileType(".pdf");
-//                return true;
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//                return false;
-//            }
-//        }
-        return false;
+        else if (fileLowerName.endsWith(".pdf")) {
+            try {
+                pdfParser = new PdfParser(this.getFile());
+                this.setExt(".pdf");
+                this.setFileType(".pdf");
+                deleteFile(destFile);
+                return this;
+            } catch (Exception e) {
+                e.printStackTrace();
+                deleteFile(destFile);
+                return null;
+            }
+        }
+        return null;
     }
 
     private void deleteFile(File file){

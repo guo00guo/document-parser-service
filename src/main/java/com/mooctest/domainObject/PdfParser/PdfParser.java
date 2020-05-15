@@ -5,6 +5,7 @@ import com.google.common.collect.Lists;
 import com.mooctest.domainObject.SuperParagraph;
 import com.mooctest.domainObject.SuperPicture;
 import com.mooctest.domainObject.SuperTable;
+import lombok.Data;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -30,6 +31,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Data
 class MyPDOutlineItem {
     private PDOutlineItem pdOutlineItem;
     private int level;
@@ -41,67 +43,44 @@ class MyPDOutlineItem {
         this.level = level;
         this.title = pdOutlineItem.getTitle().trim().replaceAll(" ","");
     }
-
-    public PDOutlineItem getPdOutlineItem() {
-        return pdOutlineItem;
-    }
-
-    public void setPdOutlineItem(PDOutlineItem pdOutlineItem) {
-        this.pdOutlineItem = pdOutlineItem;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public boolean isVisited() {
-        return visited;
-    }
-
-    public void setVisited(boolean visited) {
-        this.visited = visited;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 }
 
+@Data
 public class PdfParser {
-
-    private String pdfPath = "demo.pdf";
-    private InputStream stream = null;
-    private PDDocument document = null;
+    private transient File file;
+    private transient InputStream stream = null;
+    private transient PDDocument document = null;
 
     private List<PdfParagraph> pdfParagraphs = new ArrayList<PdfParagraph>();
-    private List<PdfSuperPicture> pdfPictures = new ArrayList<PdfSuperPicture>();
+    private List<PdfPicture> pdfPictures = new ArrayList<PdfPicture>();
     private List<PdfTable> pdfTables = new ArrayList<PdfTable>();
     private int paragraphIndex = 0;
-    private List<MyPDOutlineItem> pdOutlineItemList = new ArrayList<>();
+    private transient List<MyPDOutlineItem> pdOutlineItemList = new ArrayList<>();
     private int picture_Index = 0;
     private int curTitleIndex = 0;
 
-    // todo 设置解析文件路径
-    private void setPdfPath(String pdfPath) {
-        this.pdfPath = pdfPath;
+    public PdfParser() {}
+
+    public PdfParser(File file, InputStream stream, PDDocument document, List<PdfParagraph> pdfParagraphs, List<PdfPicture> pdfPictures, List<PdfTable> pdfTables, int paragraphIndex, List<MyPDOutlineItem> pdOutlineItemList, int picture_Index, int curTitleIndex) {
+        this.file = file;
+        this.stream = stream;
+        this.document = document;
+        this.pdfParagraphs = pdfParagraphs;
+        this.pdfPictures = pdfPictures;
+        this.pdfTables = pdfTables;
+        this.paragraphIndex = paragraphIndex;
+        this.pdOutlineItemList = pdOutlineItemList;
+        this.picture_Index = picture_Index;
+        this.curTitleIndex = curTitleIndex;
     }
 
-    public PdfParser(String pdfPath) {
-        this.setPdfPath(pdfPath);
+    public PdfParser(File file) {
+        this.file = file;
         this.loadFile();
         this.getPDFOutline();
         this.processContent();
         this.processPicture();
     }
-
 
     protected void finalize() {
         if (null != this.document) {
@@ -123,9 +102,8 @@ public class PdfParser {
     // todo 读文件
     private void loadFile() {
         try {
-            if (pdfPath.endsWith(".pdf")) {
-                File pdffile = new File(this.pdfPath);
-                document = PDDocument.load(pdffile);
+            if (this.file.getName().endsWith(".pdf")) {
+                document = PDDocument.load(this.file);
             }
         } catch (Exception e) {
             System.out.println("文件加载错误！");
@@ -156,6 +134,7 @@ public class PdfParser {
         if (null != document) {
             try {
                 int pageSize = document.getNumberOfPages();
+                System.out.println(pageSize);
                 for (int i = 0; i < pageSize; i++) {
                     // 图片内容
                     PDPage page = document.getPage(i);
@@ -166,17 +145,17 @@ public class PdfParser {
                         while (cosNamesIter.hasNext()) {
                             COSName cosName = cosNamesIter.next();
                             if (resources.isImageXObject(cosName)) {
-                                PDImageXObject Ipdmage = (PDImageXObject) resources.getXObject(cosName);
-                                BufferedImage image = Ipdmage.getImage();
+                                PDImageXObject pdImage = (PDImageXObject) resources.getXObject(cosName);
+                                BufferedImage image = pdImage.getImage();
                                 ByteArrayOutputStream outbyte = new ByteArrayOutputStream();
                                 ImageIO.write(image, "png", outbyte);
                                 byte[] b = outbyte.toByteArray();
                                 int size = b.length / 1024;
-                                PdfSuperPicture pdfPicture = new PdfSuperPicture();
+                                PdfPicture pdfPicture = new PdfPicture();
                                 pdfPicture.setBase64Content(Base64.encodeBase64String(b));
                                 pdfPicture.setWidth(image.getWidth());
                                 pdfPicture.setHeight(image.getHeight());
-                                //  pdfPicture.setFileName(image);
+                                pdfPicture.setSize(size);
                                 pdfPicture.setIndex(picture_Index);
                                 picture_Index++;
                                 this.pdfPictures.add(pdfPicture);
@@ -313,10 +292,10 @@ public class PdfParser {
         PDDocumentCatalog catalog = this.document.getDocumentCatalog();
         //获取PDDocumentOutline文档纲要对象
         PDDocumentOutline outline = catalog.getDocumentOutline();
-        //获取第一个纲要条目（标题1）
-        PDOutlineItem item = outline.getFirstChild();
         int level = 1;
         if (outline != null) {
+            //获取第一个纲要条目（标题1）
+            PDOutlineItem item = outline.getFirstChild();
             //遍历每一个标题1
             while (item != null) {
                 this.getChildOutLine(item, level);
@@ -332,6 +311,7 @@ public class PdfParser {
             if (!myPDOutlineItem.isVisited()) {
                 if (myPDOutlineItem.getTitle().equals(string)) {
                     myPDOutlineItem.setVisited(true);
+                    System.out.println(myPDOutlineItem.getLevel());
                     return myPDOutlineItem.getLevel();
                 }
             }
@@ -373,7 +353,7 @@ public class PdfParser {
 //        for (PdfPicture pdfPicture : this.pdfPictures) {
 //            pictureList.add(JSON.toJSONString(pdfPicture, filter));
 //        }
-        for (PdfSuperPicture pdfPicture : this.pdfPictures) {
+        for (PdfPicture pdfPicture : this.pdfPictures) {
             superPictureList.add(pdfPicture);
         }
         return superPictureList;

@@ -7,11 +7,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-class DocxTable extends SuperTable {
-    private String textBefore;
-    private String textAfter;
-    private DocxParagraph paragraphBefore;
-    private DocxParagraph paragraphAfter;
-    private int index;
-    public List<List<List<DocxParagraph>>> tableContent = new ArrayList<>();
+public class DocxTable extends SuperTable {
+//    private String textBefore;
+//    private String textAfter;
+//    private DocxParagraph paragraphBefore;
+//    private DocxParagraph paragraphAfter;
+//    private int index;
+    public List<List<List<DocxParagraph>>> docxTableContent = new ArrayList<>();
+
+    public DocxTable(List<List<List<DocxParagraph>>> tableContent) {
+        super();
+        this.docxTableContent = tableContent;
+    }
+
+    public DocxTable() {
+        super();
+    }
 }

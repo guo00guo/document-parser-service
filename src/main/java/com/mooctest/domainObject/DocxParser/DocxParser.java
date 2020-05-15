@@ -6,6 +6,7 @@ import com.microsoft.schemas.vml.CTShape;
 import com.mooctest.domainObject.SuperParagraph;
 import com.mooctest.domainObject.SuperPicture;
 import com.mooctest.domainObject.SuperTable;
+import com.mooctest.utils.ReadWordTable;
 import lombok.Data;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.poi.xwpf.usermodel.*;
@@ -14,10 +15,7 @@ import org.apache.xmlbeans.XmlObject;
 import org.openxmlformats.schemas.drawingml.x2006.main.CTGraphicalObject;
 import org.openxmlformats.schemas.drawingml.x2006.picture.CTPicture;
 import org.openxmlformats.schemas.drawingml.x2006.wordprocessingDrawing.CTInline;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTDrawing;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTObject;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTP;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTR;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -33,25 +31,33 @@ import java.util.regex.Pattern;
 
 @Data
 public class DocxParser {
-    private String docPath = null;
-    private File file;
-    private InputStream stream = null;
-    private XWPFDocument document = null;
-    private List<DocxParagraph> docParagraphs = new ArrayList<DocxParagraph>();
+    private transient File file;
+    private transient InputStream stream = null;
+    private transient XWPFDocument document = null;
+    private List<DocxParagraph> docxParagraphs = new ArrayList<DocxParagraph>();
     private List<DocxTable> docxTables = new ArrayList<DocxTable>();
-    private List<DocxSuperPicture> docxPictures = new ArrayList<DocxSuperPicture>();
+    private List<DocxPicture> docxPictures = new ArrayList<DocxPicture>();
     private int paragraph_index = 0;
     private int table_index = 0;
     private int picture_index = 0;
-    private String pre_type = "段落";
-    private String asciiFontName = "";
-    private String eastAsiaFontName = "";
+    private transient String pre_type = "段落";
+    private transient String asciiFontName = "";
+    private transient String eastAsiaFontName = "";
     private List<String> pictureNames = new ArrayList<String>();
-    private boolean errorWord = false;
+    private transient boolean errorWord = false;
 
-    private void setDocPath(String docPath) {
-        this.docPath = docPath;
+    public DocxParser(List<DocxParagraph> docxParagraphs, List<DocxTable> docxTables, List<DocxPicture> docxPictures, int paragraph_index,
+                      int table_index, int picture_index, List<String> pictureNames) {
+        this.docxParagraphs = docxParagraphs;
+        this.docxTables = docxTables;
+        this.docxPictures = docxPictures;
+        this.paragraph_index = paragraph_index;
+        this.table_index = table_index;
+        this.picture_index = picture_index;
+        this.pictureNames = pictureNames;
     }
+
+    public DocxParser(){}
 
     public DocxParser(File file) {
         this.file = file;
@@ -161,6 +167,7 @@ public class DocxParser {
 
     private String getFontFamily(XWPFRun xwpfRun) {
         return xwpfRun.getFontFamily() != null ? xwpfRun.getFontFamily() : this.getEastAsiaFontName();
+//        return xwpfRun.getFontFamily() != null ? xwpfRun.getFontFamily() : "";
     }
 
     private String getColor(XWPFRun xwpfRun) {
@@ -173,45 +180,72 @@ public class DocxParser {
 
         //设置表格前面的段落信息
         if (this.paragraph_index > 0) {
-            docxTable.setParagraphBefore(this.docParagraphs.get(this.paragraph_index - 1));
-            docxTable.setTextBefore(this.docParagraphs.get(this.paragraph_index - 1).getParagraphText());
+            docxTable.setParagraphBefore(this.docxParagraphs.get(this.paragraph_index - 1));
+            docxTable.setTextBefore(this.docxParagraphs.get(this.paragraph_index - 1).getParagraphText());
         }
 
-        for (XWPFTableRow xwpfTableRow : xwpfTable.getRows()) {
+        ReadWordTable readWordTable = new ReadWordTable();
+
+        // 处理合并单元格
+        int tableRowsSize = xwpfTable.getRows().size();
+        // 获取每一行
+        for (int rowIndex = 0; rowIndex < tableRowsSize; rowIndex++) {
+            int tableCellsSize = xwpfTable.getRow(rowIndex).getTableCells().size();
             List<List<DocxParagraph>> xtableRow = new ArrayList<>();
-            for (XWPFTableCell xwpfTableCell : xwpfTableRow.getTableCells()) {
+
+            // 获取每一列
+            for (int colIndex = 0; colIndex < tableCellsSize; colIndex++) {
+                if (readWordTable.isOmitCell(rowIndex, colIndex)) {
+                    continue;
+                }
+
+                XWPFTableCell xwpfTableCell = xwpfTable.getRow(rowIndex).getCell(colIndex);
+                // 获取单元格的属性
+                CTTcPr tcPr = xwpfTableCell.getCTTc().getTcPr();
+                int colspan = readWordTable.getColspan(tcPr);
+                int rowspan = readWordTable.getRowspan(xwpfTable, rowIndex, colIndex);
+
                 List<DocxParagraph> paragraphsCell = new ArrayList<>();
-//                int i = 0;
                 for (XWPFParagraph xwpfParagraph : xwpfTableCell.getParagraphs()) {
-                    paragraphsCell.add(this.processParagraph(xwpfParagraph, this.paragraph_index++));
-//                    i += 1;
+                    // 处理单元格中的段落信息
+                    DocxParagraph docxParagraph = this.processParagraph(xwpfParagraph, this.paragraph_index++);
+                    docxParagraph.setInTable(true);
+                    // 当存在合并的单元格时，获取合并的行列数
+                    if (colspan > 1) { // 合并的列
+                        docxParagraph.setColspan(colspan);
+                    }
+                    if (rowspan > 1) { // 合并的行
+                        docxParagraph.setRowspan(rowspan);
+                    }
+                    paragraphsCell.add(docxParagraph);
+
                 }
                 xtableRow.add(paragraphsCell);
             }
-            docxTable.tableContent.add(xtableRow);
+
+            docxTable.setAlignment(xwpfTable.getTableAlignment());
+            docxTable.docxTableContent.add(xtableRow);
         }
 
         //设置表格后面的段落信息
-        if (this.paragraph_index > 0) {
-            docxTable.setParagraphAfter(this.docParagraphs.get(this.paragraph_index-1));
-            docxTable.setTextAfter(this.docParagraphs.get(this.paragraph_index-1).getParagraphText());
+        if (this.paragraph_index <= this.docxParagraphs.size()) {
+            docxTable.setParagraphAfter(this.docxParagraphs.get(this.paragraph_index-1));
+            docxTable.setTextAfter(this.docxParagraphs.get(this.paragraph_index-1).getParagraphText());
         }
         this.docxTables.add(docxTable);
-        this.setPre_type("表格");
     }
 
     private DocxParagraph processParagraph(XWPFParagraph paragraph, int index) {
         //解析段落信息
         DocxParagraph docxParagraph = new DocxParagraph();
         docxParagraph.setFirstLineIndent(paragraph.getFirstLineIndent());
-        docxParagraph.setFontAlignment(paragraph.getFontAlignment());
+        docxParagraph.setFontAlignment(paragraph.getAlignment());
         docxParagraph.setIndentFromLeft(paragraph.getIndentFromLeft());
         docxParagraph.setIndentFromRight(paragraph.getIndentFromRight());
         docxParagraph.setLvl(this.getLvl(paragraph));
         docxParagraph.setParagraphText(this.processText(paragraph));
         docxParagraph.setLineSpacing(paragraph.getSpacingLineRule().getValue());
         docxParagraph.setParagraphID(index);
-        docxParagraph.setFontAlignment(paragraph.getFontAlignment());
         docxParagraph.setAlignment(paragraph.getAlignment());
         docxParagraph.setNumFmt(paragraph.getNumFmt());
         docxParagraph.setNumIlvl(paragraph.getNumIlvl());
@@ -230,24 +264,9 @@ public class DocxParser {
         List<XWPFRun> xwpfRuns = paragraph.getRuns();
         for (int i = 0; i < xwpfRuns.size(); i++) {
             XWPFRun xwpfRun = xwpfRuns.get(i);
-//            fontSize = xwpfRun.getFontSize();
-//            fontName = this.getFontFamily(xwpfRun);  // getFontFamily() ，仅当运行的run属性中存在字体系列时，它才会返回字体系列。否则它将返回null
-//            color = this.getColor(xwpfRun);
-//            bold = xwpfRun.isBold();
-//            italic = xwpfRun.isItalic();
-//            highlighted = xwpfRun.isHighlighted();
-//            underline = xwpfRun.getUnderline();
-//            strike = xwpfRun.isStrikeThrough();
-//
-//            if(index <  25){
-//                System.out.println(index + "  " + i + "  " + xwpfRun.getText(0) + "  fontSize:"+ fontSize + "  fontName:"+ fontName + "  color:" + color
-//                        + "  underLine:" + underline+ "  bold:" + bold + "  italic:"+ italic+ "  highlighted:"+ highlighted+ "  strike:"+ strike
-//                        );
-//            }
-
             if (i == 0) {
                 fontSize = xwpfRun.getFontSize();
-                fontName = this.getFontFamily(xwpfRun);
+                fontName = this.getFontFamily(xwpfRun); // getFontFamily() ，仅当运行的run属性中存在字体系列时，它才会返回字体系列。否则它将返回null
                 color = this.getColor(xwpfRun);
                 bold = xwpfRun.isBold();
                 italic = xwpfRun.isItalic();
@@ -265,6 +284,9 @@ public class DocxParser {
                 if (underline != xwpfRun.getUnderline()) underline = UnderlinePatterns.NONE;
                 if (strike != xwpfRun.isStrikeThrough()) strike = false;
             }
+//            if(index <  100){
+//                System.out.println(index + "  " + i + "  " + xwpfRun.getText(0) + "  fontSize:"+ fontSize + "  fontName:"+ fontName + "  bold:" + bold);
+//            }
         }
         docxParagraph.setFontName(fontName);
         docxParagraph.setFontSize(fontSize);
@@ -275,19 +297,8 @@ public class DocxParser {
         docxParagraph.setUnderline(underline);
         docxParagraph.setStrike(strike);
 
-        //加入对图片、 表格的后续段落设置
-        this.docParagraphs.add(docxParagraph);
-        if (this.getPre_type().equals("图片")) {// 如果之前的格式是图片，说明这个段落是表格前面的段落
-            this.docxPictures.get(this.docxPictures.size() - 1).setParagraphAfter(docxParagraph);
-            this.docxPictures.get(this.docxPictures.size() - 1).setTextAfter(docxParagraph.getParagraphText());
-        }
-//        else if (this.getPre_type().equals("表格")) {// 如果之前的格式是表格，说明这个段落是表格后面的散落
-//            this.docxTables.get(this.docxTables.size() - 1).setParagraphAfter(docxParagraph);
-//            this.docxTables.get(this.docxTables.size() - 1).setTextAfter(docxParagraph.getParagraphText());
-//        }
-        else{
-            this.setPre_type("段落");
-        }
+        this.docxParagraphs.add(docxParagraph);
+
         for (XWPFRun xwpfRun : paragraph.getRuns()) {
              //解析文本框内容，有一些文字是在文本框之内的，需要将文本框内的文字作为段落进一步解析。
             procesGroup(paragraph, xwpfRun);
@@ -419,23 +430,26 @@ public class DocxParser {
 
     private void processPicture(XWPFPictureData pictureData, int paragraphID) {
         if (this.pictureNames.contains(pictureData.toString())) return;
-        DocxSuperPicture docxPicture = new DocxSuperPicture();
+
+        DocxPicture docxPicture = new DocxPicture();
         docxPicture.setParagraphID(paragraphID);
         docxPicture.setIndex(this.picture_index++);
         docxPicture.setFileName(pictureData.getFileName());
         docxPicture.setSuggestFileExtension(pictureData.suggestFileExtension());
         docxPicture.setBase64Content(Base64.encodeBase64String(pictureData.getData()));
         this.setPre_type("图片");
-//        if (paragraphID > 1) {
-//            docxPicture.setParagraphBefore(this.docParagraphs.get(paragraphID-1));
-//            docxPicture.setTextBefore(this.docParagraphs.get(paragraphID-1).getParagraphText());
-//        }
+        // 处理图片前的段落信息
         if (paragraphID > 1) {
-            docxPicture.setParagraphBefore(this.docParagraphs.get(paragraphID - 2));
-            docxPicture.setTextBefore(this.docParagraphs.get(paragraphID - 2).getParagraphText());
+            docxPicture.setParagraphBefore(this.docxParagraphs.get(paragraphID - 2));
+            docxPicture.setTextBefore(this.docxParagraphs.get(paragraphID - 2).getParagraphText());
+        }
+
+        // 处理图片后的段落信息
+        if (this.paragraph_index <= this.docxParagraphs.size()) {
+            docxPicture.setParagraphAfter(this.docxParagraphs.get(this.paragraph_index - 1));
+            docxPicture.setTextAfter(this.docxParagraphs.get(this.paragraph_index - 1).getParagraphText());
         }
         this.pictureNames.add(pictureData.toString());
-//        System.out.println(pictureData.toString());
         this.docxPictures.add(docxPicture);
     }
 
@@ -468,7 +482,8 @@ public class DocxParser {
         List<SuperParagraph> contextList = Lists.newArrayList();
 //        SimplePropertyPreFilter filter = new SimplePropertyPreFilter();
 //        filter.getExcludes().add("XWPFParagraph");
-        for (DocxParagraph docParagraph : this.docParagraphs) {
+        for (DocxParagraph docParagraph : this.docxParagraphs) {
+//            System.out.println(docParagraph.toString());
             contextList.add(docParagraph);
         }
         return contextList;
@@ -479,7 +494,7 @@ public class DocxParser {
 //        SimplePropertyPreFilter filter = new SimplePropertyPreFilter();
 //        filter.getExcludes().add("XWPFParagraph");
         int[] levelCurrentValues = new int[] {0,0,0,0};
-        for (DocxParagraph paragraph : this.docParagraphs) {
+        for (DocxParagraph paragraph : this.docxParagraphs) {
             if (paragraph.getLvl() < 9) {
                 contextList.add(paragraph);
             }
@@ -503,6 +518,12 @@ public class DocxParser {
     public List<SuperTable> getAllTables() {
         List<SuperTable> contextList = Lists.newArrayList();
         for (DocxTable docxTable : this.docxTables) {
+            //设置表格后面的段落信息
+            if (docxTable.getParagraphAfter().getParagraphID() + 1 < this.docxParagraphs.size()) {
+                int pre_index = docxTable.getParagraphAfter().getParagraphID();
+                docxTable.setParagraphAfter(this.docxParagraphs.get(pre_index + 1));
+                docxTable.setTextAfter(this.docxParagraphs.get(pre_index + 1).getParagraphText());
+            }
             contextList.add(docxTable);
         }
         return contextList;
@@ -512,7 +533,13 @@ public class DocxParser {
         List<SuperPicture> contextList = Lists.newArrayList();
         SimplePropertyPreFilter filter = new SimplePropertyPreFilter();
 //        filter.getExcludes().add("XWPFParagraph");
-        for (DocxSuperPicture docxPicture : this.docxPictures) {
+        for (DocxPicture docxPicture : this.docxPictures) {
+            //设置图片后面的段落信息
+            if (docxPicture.getParagraphAfter().getParagraphID()+1 < this.docxParagraphs.size()) {
+                int pre_index = docxPicture.getParagraphAfter().getParagraphID();
+                docxPicture.setParagraphAfter(this.docxParagraphs.get(pre_index+1));
+                docxPicture.setTextAfter(this.docxParagraphs.get(pre_index+1).getParagraphText());
+            }
             contextList.add(docxPicture);
         }
         return contextList;

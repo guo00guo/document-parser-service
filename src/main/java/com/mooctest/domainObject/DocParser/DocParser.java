@@ -5,6 +5,7 @@ import com.google.common.collect.Lists;
 import com.mooctest.domainObject.SuperParagraph;
 import com.mooctest.domainObject.SuperPicture;
 import com.mooctest.domainObject.SuperTable;
+import lombok.Data;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.WordExtractor;
@@ -16,15 +17,25 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.IntStream;
 
+@Data
 public class DocParser {
-    private File file;
-    private InputStream stream = null;
-    private HWPFDocument document = null;
+    private transient File file;
+    private transient InputStream stream = null;
+    private transient HWPFDocument document = null;
     private List<DocParagraph> docParagraphs = new ArrayList<DocParagraph>();
     private List<DocTable> docTables = new ArrayList<DocTable>();
-    private List<DocSuperPicture> docPictures = new ArrayList<DocSuperPicture>();
+    private List<DocPicture> docPictures = new ArrayList<DocPicture>();
+    private int docTableNum = 0;
+
+    public DocParser(){}
+
+    public DocParser(List<DocParagraph> docParagraphs, List<DocTable> docTables, List<DocPicture> docPictures, int docTableNum) {
+        this.docParagraphs = docParagraphs;
+        this.docTables = docTables;
+        this.docPictures = docPictures;
+        this.docTableNum = docTableNum;
+    }
 
     public DocParser(File file) {
         this.file = file;
@@ -32,6 +43,7 @@ public class DocParser {
         this.processContent();
         this.processPicture();
     }
+
 
     protected void finalize() {
         if (null != this.document) {
@@ -71,16 +83,22 @@ public class DocParser {
         docParagraph.setLlvl(paragraph.getIlvl());
         docParagraph.setLinfo(paragraph.getIlfo());
         docParagraph.setParagraphText(CharMatcher.whitespace().removeFrom(WordExtractor.stripFields(paragraph.text())).trim());
-        docParagraph.setParagraph(paragraph);
+//        docParagraph.setParagraph(paragraph);
         docParagraph.setInTable(paragraph.isInTable());
         docParagraph.setLineSpacing(paragraphProperties.getLineSpacing().toString());
         docParagraph.setTableRowEnd(paragraph.isTableRowEnd());
         docParagraph.setJustification(paragraph.getJustification());
         docParagraph.setParagraphID(index);
-        int fontSize = -1;
+
+        //解析字体格式等
         String fontName = "";
+        String color = "";
+        int fontSize = -1;
         boolean isBold = false;
         boolean isItalic = false;
+        boolean highlighted = false;
+        boolean strike = false;
+        int underline = 0;
         CharacterRun run = null;
         for (int i = 0; i < paragraph.numCharacterRuns(); i++) {
             run = paragraph.getCharacterRun(i);
@@ -89,6 +107,9 @@ public class DocParser {
                 fontName = run.getFontName();
                 isBold = run.isBold();
                 isItalic = run.isItalic();
+                highlighted = run.isHighlighted();
+                underline = run.getUnderlineCode();
+                strike = run.isStrikeThrough();
             } else {
                 if (fontSize != run.getFontSize()) {
                     fontSize = -1;
@@ -102,48 +123,91 @@ public class DocParser {
                 if (isItalic != run.isItalic()) {
                     isItalic = false;
                 }
+                if (highlighted != run.isHighlighted()) highlighted = false;
+                if (underline != run.getUnderlineCode()) underline = 0;
+                if (strike != run.isStrikeThrough()) strike = false;
             }
         }
         docParagraph.setFontSize(fontSize);
         docParagraph.setFontName(fontName);
         docParagraph.setBold(isBold);
         docParagraph.setItalic(isItalic);
+        docParagraph.setHighlighted(highlighted);
+        docParagraph.setUnderline(underline);
+        docParagraph.setStrike(strike);
         return docParagraph;
     }
 
     private DocTable processTable(Range range, int start, int end) {
+
         DocTable docTable = new DocTable();
+        docTable.setIndex(this.docTableNum + 1);
         if (start != 0) {
             docTable.setParagraphBefore(this.docParagraphs.get(this.docParagraphs.size() - 1));
             docTable.setTextBefore(docTable.getParagraphBefore().getParagraphText());
         }
-        IntStream.range(start, end).forEachOrdered(index -> {
-            Paragraph paragraph = range.getParagraph(index);
-            DocParagraph docParagraph = this.processParagraph(paragraph, index);
-            docTable.docParagraphs.add(docParagraph);
-        });
+
         if (end < range.numParagraphs()) {
             docTable.setParagraphAfter(this.processParagraph(range.getParagraph(end), end));
             docTable.setTextAfter(docTable.getParagraphAfter().getParagraphText());
         }
+
+        TableIterator it = new TableIterator(range);
+        // 迭代文档中的表格
+        int tableNum = 0;
+        Table table = null;
+        while (it.hasNext()) {
+            if(tableNum != this.docTableNum){
+                tableNum++;
+                it.next();
+                continue;
+            }else{
+                table = it.next();
+                break;
+            }
+        }
+
+        int index = start;
+        //迭代行，默认从0开始,可以依据需要设置i的值,改变起始行数，也可设置读取到那行，只需修改循环的判断条件即可
+        for (int i = 0; i < table.numRows(); i++) {
+            TableRow tableRow = table.getRow(i);
+
+            List<List<DocParagraph>> xtableRow = new ArrayList<>();
+            //迭代列，默认从0开始
+            for (int j = 0; j < tableRow.numCells(); j++) {
+                TableCell tableCell = tableRow.getCell(j);//取得单元格
+                //取得单元格的内容
+                List<DocParagraph> paragraphsCell = new ArrayList<>();
+                for(int k = 0; k < tableCell.numParagraphs(); k++){
+                    Paragraph paragraph = tableCell.getParagraph(k);
+                    DocParagraph docParagraph = this.processParagraph(paragraph, index);
+                    paragraphsCell.add(docParagraph);
+                    index++;
+                }
+                if(paragraphsCell.size()>0)
+                    xtableRow.add(paragraphsCell);
+            }
+            if(xtableRow.size()>0)
+                docTable.docTableContent.add(xtableRow);
+        }
+        docTableNum++;
         return docTable;
     }
 
 
     private void processPicture() {
-
-
         PicturesTable picturesTable = this.document.getPicturesTable();
         int length = document.characterLength();
         List<String> pictureTextBefore = Lists.newArrayList();
         List<String> pictureTextAfter = Lists.newArrayList();
-
-
+        List<SuperParagraph> paragraphBeforeList = Lists.newArrayList();
+        List<SuperParagraph> paragraphAfterList = Lists.newArrayList();
         List<Picture> pictures = picturesTable.getAllPictures();
+
         try {
             for (int i = 0; i < length; i++) {
-
                 Range range = new Range(i, i + 1, document);
+
                 CharacterRun characterRun = range.getCharacterRun(0);
                 if (picturesTable.hasPicture(characterRun)) {
                     Range preRange;
@@ -154,40 +218,34 @@ public class DocParser {
                     }
                     Range nextRange;
                     if (i + 1000 < length) {
-                        nextRange = new Range(i + 4, i + 1000, document);
+                        nextRange = new Range(i + 2, i + 1000, document);
                     } else {
-                        nextRange = new Range(i + 4, length - 1, document);
+                        nextRange = new Range(i + 2, length - 1, document);
                     }
-                    Paragraph preparagraph1, preparagraph2, nextparagraph1, nextparagraph2;
+                    Paragraph preparagraph, nextparagraph;
                     if (preRange.numParagraphs() >= 3) {
-                        preparagraph1 = preRange.getParagraph(preRange.numParagraphs() - 3);
-                        preparagraph2 = preRange.getParagraph(preRange.numParagraphs() - 2);
+                        preparagraph = preRange.getParagraph(preRange.numParagraphs()-1);
                     } else {
-                        preparagraph1 = preRange.getParagraph(0);
-                        preparagraph2 = preRange.getParagraph(0);
+                        preparagraph = preRange.getParagraph(0);
                     }
                     if (nextRange.numParagraphs() > 1) {
-                        nextparagraph1 = nextRange.getParagraph(0);
-                        nextparagraph2 = nextRange.getParagraph(1);
+                        nextparagraph = nextRange.getParagraph(0);
                     } else {
-                        nextparagraph1 = nextRange.getParagraph(0);
-                        nextparagraph2 = nextRange.getParagraph(0);
+                        nextparagraph = nextRange.getParagraph(0);
                     }
-                    String textBefore = preparagraph1.text() + preparagraph2.text();
+                    String textBefore = preparagraph.text();
                     pictureTextBefore.add(textBefore);
-                    String textafter = nextparagraph1.text() + nextparagraph2.text();
-                    pictureTextAfter.add(textafter);
-
-
+                    String textAfter = nextparagraph.text();
+                    pictureTextAfter.add(textAfter);
                 }
-
             }
 
             int pictureNO = 0;
             for (Picture picture : pictures) {
-                DocSuperPicture docPicture = new DocSuperPicture();
+                DocPicture docPicture = new DocPicture();
                 docPicture.setHeight(picture.getHeight());
                 docPicture.setWidth(picture.getWidth());
+                docPicture.setSize(picture.getSize());
                 docPicture.setTextBefore(CharMatcher.whitespace().removeFrom(WordExtractor.stripFields(pictureTextBefore.get(pictureNO))).trim());
                 docPicture.setTextAfter(CharMatcher.whitespace().removeFrom(WordExtractor.stripFields(pictureTextAfter.get(pictureNO))).trim());
                 docPicture.setSuggestFileExtension(picture.suggestFileExtension());
@@ -277,10 +335,25 @@ public class DocParser {
         List<SuperParagraph> headList = Lists.newArrayList();
 //        SimplePropertyPreFilter filter = new SimplePropertyPreFilter();
 //        filter.getExcludes().add("paragraph");
-        for (DocParagraph docParagraph : this.docParagraphs) {
-            if (docParagraph.getLvl() < 9) {
-                headList.add(docParagraph);
+
+//        int[] levelCurrentValues = new int[] {0,0,0,0};
+        for (DocParagraph paragraph : this.docParagraphs) {
+            if (paragraph.getLvl() < 9) {
+                headList.add(paragraph);
             }
+//            if (paragraph.getNumFmt() != null){
+//                String levelText = paragraph.getNumLevelText();
+//                BigInteger levelDepth = paragraph.getNumIlvl();
+//                if(levelText!=null) {
+//                    levelCurrentValues[levelDepth.intValue()] += 1;
+//                    levelText = levelText.replace("%1", "" + levelCurrentValues[0]);
+//                    levelText = levelText.replace("%2", "" + levelCurrentValues[1]);
+//                    levelText = levelText.replace("%3", "" + levelCurrentValues[2]);
+//                    levelText = levelText.replace("%4", "" + levelCurrentValues[3]);
+//                    paragraph.setNumLevelText(levelText);
+//                }
+//                headList.add(paragraph);
+//            }
         }
         return headList;
     }
@@ -292,7 +365,7 @@ public class DocParser {
 //        for (DocPicture docParagraph : this.docPictures) {
 //            pictureList.add(JSON.toJSONString(docParagraph, filter));
 //        }
-        for (DocSuperPicture docParagraph : this.docPictures) {
+        for (DocPicture docParagraph : this.docPictures) {
             superPictureList.add(docParagraph);
         }
         return superPictureList;
