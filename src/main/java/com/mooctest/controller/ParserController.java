@@ -46,7 +46,6 @@ public class ParserController {
             throw new HttpBadRequestException("No file is uploaded!");
         }
         map.put("token", tokenList);
-        log.info("上传并解析文档,token：{}",map.toString());
         return new ResponseVO<>(ServerCode.SUCCESS,map);
     }
 
@@ -54,7 +53,6 @@ public class ParserController {
     @ApiOperation(value="获取文档的所有段落信息",notes="获取文档的所有段落信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<List<SuperParagraph>> getAllPara(@PathVariable(name = "token") String token){
-        log.info("获取文档的所有段落信息,token：{}",token);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllPara(token));
     }
 
@@ -62,7 +60,6 @@ public class ParserController {
     @ApiOperation(value="获取文档的所有图片信息",notes="获取文档的所有图片信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<List<SuperPicture>> getAllPic(@PathVariable(name = "token") String token) {
-        log.info("获取文档的所有图片信息,token：{}",token);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllPicture(token));
     }
 
@@ -70,7 +67,6 @@ public class ParserController {
     @ApiOperation(value="获取文档的所有表格信息",notes="获取文档的所有表格信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<List<SuperTable>> getAllTable(@PathVariable(name = "token") String token) {
-        log.info("获取文档的所有表格信息,token：{}",token);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllTable(token));
     }
 
@@ -78,7 +74,6 @@ public class ParserController {
     @ApiOperation(value="获取文档的所有标题信息",notes="获取文档的所有标题信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<List<SuperParagraph>> getAllTitle(@PathVariable(name = "token") String token) {
-        log.info("获取文档的所有标题信息,token：{}",token);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllTitle(token));
     }
 
@@ -92,7 +87,6 @@ public class ParserController {
     @ApiOperation(value="获取文档指定段落的段落信息",notes="获取文档指定标题下的所有段落信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<SuperParagraph> getParaInfoByParaId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) {
-        log.info("文档指定段落的段落信息,token：{}, paragraphId:{}",token, paraId);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getParaInfoByParaId(token, paraId));
     }
 
@@ -100,7 +94,6 @@ public class ParserController {
     @ApiOperation(value="获取文档指定段落的段落格式信息",notes="获取文档指定段落的段落格式信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<SuperParagraphStyle> getParaStyleByParaId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) {
-        log.info("文档指定段落的段落格式信息,token：{}, paragraphId:{}",token, paraId);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getParaStyleByParaId(token, paraId));
     }
 
@@ -108,7 +101,6 @@ public class ParserController {
     @ApiOperation(value="获取文档指定段落的字体格式信息",notes="获取文档指定段落的字体格式信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<SuperFontStyle> getFontStyleByParaId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) {
-        log.info("文档指定段落的字体格式信息,token：{}, paragraphId:{}",token, paraId);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getFontStyleByParaId(token, paraId));
     }
 
@@ -122,7 +114,6 @@ public class ParserController {
     @ApiOperation(value="获取文档指定标题下的所有段落信息",notes="获取文档指定标题下的所有段落信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<List<SuperParagraph>> getAllParaByTitleId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) {
-        log.info("获取文档指定标题下的所有段落信息,token：{}, titleId:{}",token, paraId);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllParaByTitleId(token, paraId));
     }
 
@@ -130,7 +121,6 @@ public class ParserController {
     @ApiOperation(value="获取文档指定标题下的所有图片信息",notes="获取文档指定标题下的所有图片信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<List<SuperPicture>> getAllPictureByTitleId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) {
-        log.info("获取文档指定标题下的所有图片信息,token：{}, titleId:{}",token, paraId);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllPictureByTitleId(token, paraId));
     }
 
@@ -138,7 +128,6 @@ public class ParserController {
     @ApiOperation(value="获取文档指定标题下的所有表格信息",notes="获取文档指定标题下的所有表格信息，需参数", httpMethod = "GET")
     @ResponseBody
     public ResponseVO<List<SuperTable>> getAllTableByTitleId(@PathVariable(name = "token") String token, @PathVariable("paragraph_id") Long paraId) {
-        log.info("获取文档指定标题下的所有表格信息,token：{}, titleId:{}",token, paraId);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.getAllTableByTitleId(token, paraId));
     }
 
@@ -146,7 +135,6 @@ public class ParserController {
     @ApiOperation(value="释放服务端资源",notes="释放服务端资源，需参数", httpMethod = "DELETE")
     @ResponseBody
     public ResponseVO<String> deleteParserTaskByToken(@PathVariable(name = "token") String token) {
-        log.info("释放服务端资源,token：{}",token);
         return new ResponseVO<>(ServerCode.SUCCESS,parserService.deleteParserTaskByToken(token));
     }
 }

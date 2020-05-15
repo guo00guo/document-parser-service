@@ -10,6 +10,7 @@
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/DocxParser/DocxTable.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/PdfParser/PdfTable.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/DocxParser/DocxParser.java
+/Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/configuration/RedisAutoConfiguration.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/utils/ReadWordTable.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/domainObject/SuperParagraphStyle.java
 /Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/src/main/java/com/mooctest/data/StyleWrapper.java
