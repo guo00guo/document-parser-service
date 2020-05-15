@@ -23,7 +23,6 @@ import javax.xml.namespace.QName;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -69,7 +68,7 @@ public class DocxParser {
     }
 
     private void processDefaultValue() {
-        XWPFDefaultRunStyle xwpfDefaultRunStyle = this.document.getStyles().getDefaultRunStyle();
+//        XWPFDefaultRunStyle xwpfDefaultRunStyle = this.document.getStyles().getDefaultRunStyle();
 //        if (xwpfDefaultRunStyle.getRPr().getRFonts().getEastAsia() != null) {
 //            this.setEastAsiaFontName(xwpfDefaultRunStyle.getRPr().getRFonts().getEastAsia());
 //        } else {
@@ -86,7 +85,7 @@ public class DocxParser {
     protected void finalize() {
         if (null != this.document) {
             try {
-                this.document.close();
+//                this.document.close();//xwpf
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -157,12 +156,14 @@ public class DocxParser {
     }
 
     private String processText(XWPFParagraph paragraph) {
-//        return unescapeJava(paragraph.getParagraphText());
-        if (null != paragraph.getNumLevelText()) {
-            return paragraph.getNumLevelText() + paragraph.getNumFmt() + unescapeJava(paragraph.getParagraphText());
-        } else {
-            return unescapeJava(paragraph.getParagraphText());
-        }
+        return unescapeJava(paragraph.getParagraphText());
+        //xwpf
+//        if (null != paragraph.getNumLevelText()) {
+//            return paragraph.getNumLevelText() + paragraph.getNumFmt() + unescapeJava(paragraph.getParagraphText());
+//        } else {
+//            return unescapeJava(paragraph.getParagraphText());
+//        }
+
     }
 
     private String getFontFamily(XWPFRun xwpfRun) {
@@ -223,7 +224,7 @@ public class DocxParser {
                 xtableRow.add(paragraphsCell);
             }
 
-            docxTable.setAlignment(xwpfTable.getTableAlignment());
+//            docxTable.setAlignment(xwpfTable.getTableAlignment());
             docxTable.docxTableContent.add(xtableRow);
         }
 
@@ -238,18 +239,18 @@ public class DocxParser {
     private DocxParagraph processParagraph(XWPFParagraph paragraph, int index) {
         //解析段落信息
         DocxParagraph docxParagraph = new DocxParagraph();
-        docxParagraph.setFirstLineIndent(paragraph.getFirstLineIndent());
+//        docxParagraph.setFirstLineIndent(paragraph.getFirstLineIndent());
         docxParagraph.setFontAlignment(paragraph.getAlignment());
-        docxParagraph.setIndentFromLeft(paragraph.getIndentFromLeft());
-        docxParagraph.setIndentFromRight(paragraph.getIndentFromRight());
+//        docxParagraph.setIndentFromLeft(paragraph.getIndentFromLeft());
+//        docxParagraph.setIndentFromRight(paragraph.getIndentFromRight());
         docxParagraph.setLvl(this.getLvl(paragraph));
         docxParagraph.setParagraphText(this.processText(paragraph));
         docxParagraph.setLineSpacing(paragraph.getSpacingLineRule().getValue());
         docxParagraph.setParagraphID(index);
         docxParagraph.setAlignment(paragraph.getAlignment());
-        docxParagraph.setNumFmt(paragraph.getNumFmt());
-        docxParagraph.setNumIlvl(paragraph.getNumIlvl());
-        docxParagraph.setNumLevelText(paragraph.getNumLevelText());
+//        docxParagraph.setNumFmt(paragraph.getNumFmt());
+//        docxParagraph.setNumIlvl(paragraph.getNumIlvl());
+//        docxParagraph.setNumLevelText(paragraph.getNumLevelText());
         docxParagraph.setNumId(paragraph.getNumID());
 
         //解析字体格式等
@@ -258,7 +259,7 @@ public class DocxParser {
         int fontSize = -1;
         boolean bold = false;
         boolean italic = false;
-        boolean highlighted = false;
+//        boolean highlighted = false;
         boolean strike = false;
         UnderlinePatterns underline = UnderlinePatterns.NONE;
         List<XWPFRun> xwpfRuns = paragraph.getRuns();
@@ -270,9 +271,11 @@ public class DocxParser {
                 color = this.getColor(xwpfRun);
                 bold = xwpfRun.isBold();
                 italic = xwpfRun.isItalic();
-                highlighted = xwpfRun.isHighlighted();
+                //xwpf
+//                highlighted = xwpfRun.isHighlighted();
+//                strike = xwpfRun.isStrikeThrough();
                 underline = xwpfRun.getUnderline();
-                strike = xwpfRun.isStrikeThrough();
+                strike = xwpfRun.isStrike();
             } else {
                 if (fontSize == -1 && fontName.equals("") && color.equals("")) break;
                 if (fontSize != xwpfRun.getFontSize()) fontSize = -1;
@@ -280,9 +283,11 @@ public class DocxParser {
                 if (!color.equals(this.getColor(xwpfRun))) color = "";
                 if (bold != xwpfRun.isBold()) bold = false;
                 if (italic != xwpfRun.isItalic()) italic = false;
-                if (highlighted != xwpfRun.isHighlighted()) highlighted = false;
+//                if (highlighted != xwpfRun.isHighlighted()) highlighted = false;
+//                if (strike != xwpfRun.isStrikeThrough()) strike = false;
+                if (strike != xwpfRun.isStrike()) strike = false;
                 if (underline != xwpfRun.getUnderline()) underline = UnderlinePatterns.NONE;
-                if (strike != xwpfRun.isStrikeThrough()) strike = false;
+
             }
 //            if(index <  100){
 //                System.out.println(index + "  " + i + "  " + xwpfRun.getText(0) + "  fontSize:"+ fontSize + "  fontName:"+ fontName + "  bold:" + bold);
@@ -293,7 +298,7 @@ public class DocxParser {
         docxParagraph.setColor(color);
         docxParagraph.setBold(bold);
         docxParagraph.setItalic(italic);
-        docxParagraph.setHighlighted(highlighted);
+//        docxParagraph.setHighlighted(highlighted);
         docxParagraph.setUnderline(underline);
         docxParagraph.setStrike(strike);
 
@@ -498,17 +503,21 @@ public class DocxParser {
             if (paragraph.getLvl() < 9) {
                 contextList.add(paragraph);
             }
-            if(paragraph.getNumFmt() != null){
-                String levelText = paragraph.getNumLevelText();
-                BigInteger levelDepth = paragraph.getNumIlvl();
-                if(levelText!=null) {
-                    levelCurrentValues[levelDepth.intValue()] += 1;
-                    levelText = levelText.replace("%1", "" + levelCurrentValues[0]);
-                    levelText = levelText.replace("%2", "" + levelCurrentValues[1]);
-                    levelText = levelText.replace("%3", "" + levelCurrentValues[2]);
-                    levelText = levelText.replace("%4", "" + levelCurrentValues[3]);
-                    paragraph.setNumLevelText(levelText);
-                }
+            //xwpf
+//            if(paragraph.getNumFmt() != null){
+//                String levelText = paragraph.getNumLevelText();
+//                BigInteger levelDepth = paragraph.getNumIlvl();
+//                if(levelText!=null) {
+//                    levelCurrentValues[levelDepth.intValue()] += 1;
+//                    levelText = levelText.replace("%1", "" + levelCurrentValues[0]);
+//                    levelText = levelText.replace("%2", "" + levelCurrentValues[1]);
+//                    levelText = levelText.replace("%3", "" + levelCurrentValues[2]);
+//                    levelText = levelText.replace("%4", "" + levelCurrentValues[3]);
+//                    paragraph.setNumLevelText(levelText);
+//                }
+//                contextList.add(paragraph);
+//            }
+            if(paragraph.getNumId() != null){
                 contextList.add(paragraph);
             }
         }

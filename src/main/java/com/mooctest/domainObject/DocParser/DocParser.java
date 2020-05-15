@@ -48,7 +48,7 @@ public class DocParser {
     protected void finalize() {
         if (null != this.document) {
             try {
-                this.document.close();
+//                this.document.close(); //xwpf
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -74,7 +74,6 @@ public class DocParser {
     private DocParagraph processParagraph(Paragraph paragraph, int index) {
         //解析段落信息
         DocParagraph docParagraph = new DocParagraph();
-        ParagraphProperties paragraphProperties = paragraph.getProps();
         docParagraph.setFirstLineIndent(paragraph.getFirstLineIndent());
         docParagraph.setFontAlignment(paragraph.getFontAlignment());
         docParagraph.setIndentFromLeft(paragraph.getIndentFromLeft());
@@ -85,7 +84,7 @@ public class DocParser {
         docParagraph.setParagraphText(CharMatcher.whitespace().removeFrom(WordExtractor.stripFields(paragraph.text())).trim());
 //        docParagraph.setParagraph(paragraph);
         docParagraph.setInTable(paragraph.isInTable());
-        docParagraph.setLineSpacing(paragraphProperties.getLineSpacing().toString());
+        docParagraph.setLineSpacing(paragraph.getLineSpacing().toString());
         docParagraph.setTableRowEnd(paragraph.isTableRowEnd());
         docParagraph.setJustification(paragraph.getJustification());
         docParagraph.setParagraphID(index);

@@ -1,7 +1,6 @@
 package com.mooctest.domainObject;
 
 import lombok.Data;
-import org.apache.poi.xwpf.usermodel.TableRowAlign;
 
 /**
  * @author guochao
@@ -14,15 +13,15 @@ public class SuperTable {
     private SuperParagraph paragraphBefore;
     private SuperParagraph paragraphAfter;
     private int index;
-    private TableRowAlign alignment;
+//    private TableRowAlign alignment;
 
-    public SuperTable(String textBefore, String textAfter, SuperParagraph paragraphBefore, SuperParagraph paragraphAfter, int index, TableRowAlign alignment) {
+
+    public SuperTable(String textBefore, String textAfter, SuperParagraph paragraphBefore, SuperParagraph paragraphAfter, int index) {
         this.textBefore = textBefore;
         this.textAfter = textAfter;
         this.paragraphBefore = paragraphBefore;
         this.paragraphAfter = paragraphAfter;
         this.index = index;
-        this.alignment = alignment;
     }
 
     public SuperTable() {

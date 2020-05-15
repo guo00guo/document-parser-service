@@ -34,7 +34,7 @@ public class WordParser {
 
     public WordParser parser(MultipartFile uploadFile, String fileName) throws IOException {
         String absolutePath = System.getProperty("user.dir");
-        String path = absolutePath + "/src/main/java/resources/fileTemp/";
+        String path = absolutePath + "/fileTemp/";
         File destFile = new File(path, fileName);
         // 将MultipartFile存到临时文件中
         uploadFile.transferTo(destFile);

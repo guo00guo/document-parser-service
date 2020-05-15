@@ -1,13 +1,10 @@
 package com.mooctest.utils;
 
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableCell;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTDecimalNumber;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTTcPr;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -220,18 +217,18 @@ public class ReadWordTable {
         omitCellsList.clear();
     }
     public static void main(String[] args) {
-        ReadWordTable readWordTable = new ReadWordTable();
-        String file = "/Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/testData/文档解析模块V0.3.docx";
-        try (FileInputStream fileInputStream = new FileInputStream(file);
-             XWPFDocument document = new XWPFDocument(fileInputStream);) {
-            List<XWPFTable> tables = document.getTables();
-            for (XWPFTable table : tables) {
-//                readWordTable.readTable(table);
-                System.out.println(readWordTable.readTable(table));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        ReadWordTable readWordTable = new ReadWordTable();
+//        String file = "/Users/guochao/Desktop/documentParserService/wordParserWithPOI-V4.1.2/testData/文档解析模块V0.3.docx";
+//        try (FileInputStream fileInputStream = new FileInputStream(file);
+//             XWPFDocument document = new XWPFDocument(fileInputStream);) {
+//            List<XWPFTable> tables = document.getTables();
+//            for (XWPFTable table : tables) {
+////                readWordTable.readTable(table);
+//                System.out.println(readWordTable.readTable(table));
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
 }

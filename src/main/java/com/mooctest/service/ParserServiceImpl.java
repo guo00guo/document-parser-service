@@ -237,7 +237,7 @@ public class ParserServiceImpl implements ParserService {
         WordParser wordParser = WordParserFactory.createWordParser();
         wordParser.parser(uploadFile, fileName);
         String absolutePath = System.getProperty("user.dir");
-        String path = absolutePath + "/src/main/java/resources/fileTemp/";
+        String path = absolutePath + "/fileTemp/";
 
         String fileLowerName = fileName.toLowerCase();
         String fileType = fileLowerName.substring(fileLowerName.lastIndexOf(".") + 1, fileLowerName.length());
@@ -289,7 +289,7 @@ public class ParserServiceImpl implements ParserService {
 
     private WordParser getObjectFromJsonFile(String token) {
         String absolutePath = System.getProperty("user.dir");
-        String path = absolutePath + "/src/main/java/resources/fileTemp/";
+        String path = absolutePath + "/fileTemp/";
         String filePath = path + token + ".json";
         String jsonData = readJsonData(filePath);
         Map<String, Object> map = new HashMap<>();
