@@ -7,11 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_1_1_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/configuration/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/configuration/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/controller/ParserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/controller/ParserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserAsyncImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserAsyncImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/wordParserPOI.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/configuration/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/configuration/RedisConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/configuration/SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/configuration/SwaggerConfig.class" afterDir="false" />
@@ -48,10 +52,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/service/RedisUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/service/RedisUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/utils/ExportTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/utils/ExportTable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/utils/ReadWordTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mooctest/utils/ReadWordTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordParserPOI-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordParserPOI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wordParserPOI.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -333,6 +333,9 @@
       <workItem from="1589378306251" duration="1364000" />
       <workItem from="1589416506003" duration="39408000" />
       <workItem from="1589542712664" duration="5219000" />
+      <workItem from="1589552348786" duration="3473000" />
+      <workItem from="1589868441965" duration="261000" />
+      <workItem from="1590230377245" duration="557000" />
     </task>
     <servers />
   </component>
