@@ -260,9 +260,10 @@ public class ParserServiceImpl implements ParserService {
         Object redisContentTemplate = valueOperations.get(token + "-" + EXP_TIMES);
         if(redisContent == null && redisContentTemplate == null){
             throw new HttpBadRequestException("token已失效！");
-        }else if(redisContent == null && redisContentTemplate != null){
-            throw new HttpBadRequestException("正在解析中！");
         }
+//        else if(redisContent == null && redisContentTemplate != null){
+//            throw new HttpBadRequestException("正在解析中，请耐心等待！");
+//        }
         return getResultFromRedis((String) redisContent);
     }
 
