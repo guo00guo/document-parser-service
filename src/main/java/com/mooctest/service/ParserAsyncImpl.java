@@ -27,18 +27,10 @@ public class ParserAsyncImpl {
     private RedisTemplate<Object,Object> redisTemplate;
     @Value("${redis.timeout}")
     private int EXP_TIMES;
-    @Value("${redis.feature}")
-    private String REDIS_FEATURE;
 
     @Async
     public Future<String> asyncParserFile(MultipartFile uploadFile, String fileName, String token) throws IOException {
         WordParser wordParser = WordParserFactory.createWordParser();
-
-//         设置临时的redis缓存，用于判断正在解析中
-//        AsyncResult<String> asyncResult = new AsyncResult<>(token + "-" + REDIS_FEATURE);
-//        ValueOperations valueOperations = redisTemplate.opsForValue();
-//        valueOperations.set(token + "-" + asyncResult, true, EXP_TIMES, TimeUnit.SECONDS);
-
         wordParser.parser(uploadFile, fileName);
         // 存入redis中
         Gson gson = new Gson();

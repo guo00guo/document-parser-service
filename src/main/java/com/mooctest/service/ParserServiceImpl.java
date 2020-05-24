@@ -47,8 +47,6 @@ public class ParserServiceImpl implements ParserService {
     private ParserAsyncImpl parserAsync;
     @Value("${redis.timeout}")
     private int EXP_TIMES;
-    @Value("${redis.release}")
-    private int RELEASE_TIMES;
 
     @Override
     public String parserFile(MultipartFile uploadFile) throws IOException {
@@ -241,11 +239,12 @@ public class ParserServiceImpl implements ParserService {
         if(redisContent == null && redisContentTemplate == null){
             return "token已失效！无需重复释放资源！";
         }
+
         if(redisContent != null){
-            valueOperations.set(token, true, RELEASE_TIMES, TimeUnit.SECONDS);
+            redisTemplate.delete(token);
         }
         if(redisContentTemplate != null){
-            valueOperations.set(token + "-" + EXP_TIMES, true, RELEASE_TIMES, TimeUnit.SECONDS);
+            redisTemplate.delete(token + "-" + EXP_TIMES);
         }
         return "资源释放成功";
     }
@@ -261,9 +260,10 @@ public class ParserServiceImpl implements ParserService {
         Object redisContentTemplate = valueOperations.get(token + "-" + EXP_TIMES);
         if(redisContent == null && redisContentTemplate == null){
             throw new HttpBadRequestException("token已失效！");
-        }else if(redisContent == null && redisContentTemplate != null){
-            throw new HttpBadRequestException("正在解析中！");
         }
+//        else if(redisContent == null && redisContentTemplate != null){
+//            throw new HttpBadRequestException("正在解析中，请耐心等待！");
+//        }
         return getResultFromRedis((String) redisContent);
     }
 
@@ -351,7 +351,7 @@ public class ParserServiceImpl implements ParserService {
     }
 
     /**
-     * 重json文件中获取JavaBean
+     * 从json文件中获取JavaBean
      * @param token
      * @return
      */
