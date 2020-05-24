@@ -8,9 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cb99babc-f02c-4465-be64-36b606be5b14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mooctest/service/ParserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/Application.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/configuration/RedisConfig.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/configuration/SwaggerConfig.class" beforeDir="false" />
@@ -48,11 +48,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/service/RedisUtil.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/utils/ExportTable.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mooctest/utils/ReadWordTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wordParserPOI-1.0-SNAPSHOT.jar.original" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -336,7 +331,7 @@
       <workItem from="1589542712664" duration="5219000" />
       <workItem from="1589552348786" duration="3473000" />
       <workItem from="1589868441965" duration="261000" />
-      <workItem from="1590230377245" duration="1372000" />
+      <workItem from="1590230377245" duration="2201000" />
     </task>
     <servers />
   </component>
