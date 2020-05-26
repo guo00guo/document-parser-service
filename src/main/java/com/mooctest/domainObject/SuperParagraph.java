@@ -24,8 +24,8 @@ public class SuperParagraph implements Serializable {
     private boolean strike = false; // 是否存在单删除线
 
     // doc 有 docx 没有
-    private int justification = 0;  // 0=left, 1=center, 2=right, 3=left and right
-    private boolean tableRowEnd = false;
+//    private String justification;  // 0=left, 1=center, 2=right, 3=left and right
+//    private boolean tableRowEnd = false;
 
     private boolean inTable = false;
     private int paragraphID;
@@ -47,7 +47,7 @@ public class SuperParagraph implements Serializable {
 //    private UnderlinePatterns underline = UnderlinePatterns.NONE;   // 是否存在下划线
 
 
-    public SuperParagraph(String paragraphText, int lvl, int fontSize, String fontName, String asciiFontName, String eastAsiaFontName, boolean bold, boolean italic, boolean highlighted, boolean strike, int justification, boolean tableRowEnd, boolean inTable, int paragraphID, int indentFromLeft, int indentFromRight, int firstLineIndent, String color, int rowspan, int colspan, String numFmt, String numLevelText, BigInteger numIlvl, BigInteger numId) {
+    public SuperParagraph(String paragraphText, int lvl, int fontSize, String fontName, String asciiFontName, String eastAsiaFontName, boolean bold, boolean italic, boolean highlighted, boolean strike, boolean inTable, int paragraphID, int indentFromLeft, int indentFromRight, int firstLineIndent, String color, int rowspan, int colspan, String numFmt, String numLevelText, BigInteger numIlvl, BigInteger numId) {
         this.paragraphText = paragraphText;
         this.lvl = lvl;
         this.fontSize = fontSize;
@@ -58,8 +58,6 @@ public class SuperParagraph implements Serializable {
         this.italic = italic;
         this.highlighted = highlighted;
         this.strike = strike;
-        this.justification = justification;
-        this.tableRowEnd = tableRowEnd;
         this.inTable = inTable;
         this.paragraphID = paragraphID;
         this.indentFromLeft = indentFromLeft;

@@ -1,6 +1,7 @@
 package com.mooctest.domainObject;
 
 import lombok.Data;
+import org.apache.poi.xwpf.usermodel.TableRowAlign;
 
 import java.io.Serializable;
 
@@ -15,7 +16,7 @@ public class SuperTable implements Serializable {
     private SuperParagraph paragraphBefore;
     private SuperParagraph paragraphAfter;
     private int index;
-//    private TableRowAlign alignment;
+    private TableRowAlign alignment;
 
 
     public SuperTable(String textBefore, String textAfter, SuperParagraph paragraphBefore, SuperParagraph paragraphAfter, int index) {

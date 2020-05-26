@@ -2,6 +2,7 @@ package com.mooctest.domainObject.DocParser;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.collect.Lists;
+import com.mooctest.data.enums.JustificationEnum;
 import com.mooctest.domainObject.SuperParagraph;
 import com.mooctest.domainObject.SuperPicture;
 import com.mooctest.domainObject.SuperTable;
@@ -16,6 +17,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +51,7 @@ public class DocParser implements Serializable {
     protected void finalize() {
         if (null != this.document) {
             try {
-//                this.document.close(); //xwpf
+                this.document.close(); //xwpf
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -87,7 +89,7 @@ public class DocParser implements Serializable {
         docParagraph.setInTable(paragraph.isInTable());
         docParagraph.setLineSpacing(paragraph.getLineSpacing().toString());
         docParagraph.setTableRowEnd(paragraph.isTableRowEnd());
-        docParagraph.setJustification(paragraph.getJustification());
+        docParagraph.setJustification(JustificationEnum.getJustification(paragraph.getJustification()));
         docParagraph.setParagraphID(index);
 
         //解析字体格式等
@@ -336,24 +338,24 @@ public class DocParser implements Serializable {
 //        SimplePropertyPreFilter filter = new SimplePropertyPreFilter();
 //        filter.getExcludes().add("paragraph");
 
-//        int[] levelCurrentValues = new int[] {0,0,0,0};
+        int[] levelCurrentValues = new int[] {0,0,0,0};
         for (DocParagraph paragraph : this.docParagraphs) {
             if (paragraph.getLvl() < 9) {
                 headList.add(paragraph);
             }
-//            if (paragraph.getNumFmt() != null){
-//                String levelText = paragraph.getNumLevelText();
-//                BigInteger levelDepth = paragraph.getNumIlvl();
-//                if(levelText!=null) {
-//                    levelCurrentValues[levelDepth.intValue()] += 1;
-//                    levelText = levelText.replace("%1", "" + levelCurrentValues[0]);
-//                    levelText = levelText.replace("%2", "" + levelCurrentValues[1]);
-//                    levelText = levelText.replace("%3", "" + levelCurrentValues[2]);
-//                    levelText = levelText.replace("%4", "" + levelCurrentValues[3]);
-//                    paragraph.setNumLevelText(levelText);
-//                }
-//                headList.add(paragraph);
-//            }
+            if (paragraph.getNumFmt() != null){
+                String levelText = paragraph.getNumLevelText();
+                BigInteger levelDepth = paragraph.getNumIlvl();
+                if(levelText!=null) {
+                    levelCurrentValues[levelDepth.intValue()] += 1;
+                    levelText = levelText.replace("%1", "" + levelCurrentValues[0]);
+                    levelText = levelText.replace("%2", "" + levelCurrentValues[1]);
+                    levelText = levelText.replace("%3", "" + levelCurrentValues[2]);
+                    levelText = levelText.replace("%4", "" + levelCurrentValues[3]);
+                    paragraph.setNumLevelText(levelText);
+                }
+                headList.add(paragraph);
+            }
         }
         return headList;
     }
