@@ -44,8 +44,8 @@ public class DocxParagraph extends SuperParagraph implements Serializable {
 //    private BigInteger numId;     // 标题级别
 
 
-    public DocxParagraph(String paragraphText, int lvl, int fontSize, String fontName, String asciiFontName, String eastAsiaFontName, boolean bold, boolean italic, boolean highlighted, boolean strike, int justification, boolean tableRowEnd, boolean inTable, int paragraphID, int indentFromLeft, int indentFromRight, int firstLineIndent, String color, int rowspan, int colspan, String numFmt, String numLevelText, BigInteger numIlvl, BigInteger numId, UnderlinePatterns underline, int lineSpacing, ParagraphAlignment fontAlignment, ParagraphAlignment alignment) {
-        super(paragraphText, lvl, fontSize, fontName, asciiFontName, eastAsiaFontName, bold, italic, highlighted, strike, justification, tableRowEnd, inTable, paragraphID, indentFromLeft, indentFromRight, firstLineIndent, color, rowspan, colspan, numFmt, numLevelText, numIlvl, numId);
+    public DocxParagraph(String paragraphText, int lvl, int fontSize, String fontName, String asciiFontName, String eastAsiaFontName, boolean bold, boolean italic, boolean highlighted, boolean strike, boolean inTable, int paragraphID, int indentFromLeft, int indentFromRight, int firstLineIndent, String color, int rowspan, int colspan, String numFmt, String numLevelText, BigInteger numIlvl, BigInteger numId, UnderlinePatterns underline, int lineSpacing, ParagraphAlignment fontAlignment, ParagraphAlignment alignment) {
+        super(paragraphText, lvl, fontSize, fontName, asciiFontName, eastAsiaFontName, bold, italic, highlighted, strike, inTable, paragraphID, indentFromLeft, indentFromRight, firstLineIndent, color, rowspan, colspan, numFmt, numLevelText, numIlvl, numId);
         this.underline = underline;
         this.lineSpacing = lineSpacing;
         this.fontAlignment = fontAlignment;
